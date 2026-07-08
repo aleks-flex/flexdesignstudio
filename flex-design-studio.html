@@ -51,7 +51,7 @@
 <style>
   :root{
     --paper:#FFFFFF;
-    --panel:#F7F5F0;
+    --panel:#F9F6F1;
     --ink:#1C1B19;
     --ink-soft:#5A574E;
     --line: rgba(28,27,25,0.18);
@@ -66,7 +66,7 @@
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    margin:0; background:var(--paper); color:var(--ink);
+    margin:0; background:linear-gradient(180deg, #FAF8F5 0%, #BFC5CC 100%); background-attachment:fixed; color:var(--ink);
     font-family:'IBM Plex Sans', sans-serif;
     -webkit-font-smoothing:antialiased;
   }
@@ -91,7 +91,7 @@
   .gradient-bar{height:4px; background:var(--gradient); position:sticky; top:0; z-index:101;}
   header.site-nav{
     position:sticky; top:0; z-index:100;
-    background:rgba(255,255,255,0.94); backdrop-filter:blur(6px);
+    background:linear-gradient(180deg, #FAF8F5 0%, #BFC5CC 100%); background-attachment:fixed; backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
   }
   .nav-inner{
@@ -178,6 +178,9 @@
 
   /* ---------- TITLE-BLOCK CARDS (signature element) ---------- */
   .tb-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:22px;}
+  #sectorsGrid{grid-template-columns:repeat(3, 1fr);}
+  @media (max-width:860px){#sectorsGrid{grid-template-columns:repeat(2, 1fr);}}
+  @media (max-width:560px){#sectorsGrid{grid-template-columns:1fr;}}
   .tb-card{
     border:1px solid var(--line); background:var(--panel); position:relative;
     transition:transform .18s ease, border-color .18s ease;
@@ -191,11 +194,11 @@
   .tb-card::before, .tb-card::after{
     content:''; position:absolute; width:10px; height:10px; pointer-events:none;
   }
-  .tb-card::before{top:-1px; left:-1px; border-top:1px solid var(--accent); border-left:1px solid var(--accent);}
-  .tb-card::after{bottom:-1px; right:-1px; border-bottom:1px solid var(--accent); border-right:1px solid var(--accent);}
+  .tb-card::before{top:-2px; left:-2px; border-top:2px solid var(--accent); border-left:2px solid var(--accent);}
+  .tb-card::after{bottom:-2px; right:-2px; border-bottom:2px solid var(--accent); border-right:2px solid var(--accent);}
   .tb-card .tb-body{padding:26px 22px 18px; flex:1 1 auto;}
-  .tb-card .tb-body h3{font-size:1.15rem; margin-bottom:8px;}
-  .tb-card .tb-body p{color:var(--ink-soft); font-size:0.92rem; line-height:1.55;}
+  .tb-card .tb-body h3{font-size:1.02rem; margin-bottom:8px;}
+  .tb-card .tb-body p{color:var(--ink-soft); font-size:0.85rem; line-height:1.5;}
   .tb-meta{
     border-top:1px solid var(--line); padding:0 22px; display:flex; justify-content:space-between; align-items:center;
     font-family:'IBM Plex Mono', monospace; font-size:0.66rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em;
@@ -210,7 +213,7 @@
     content:''; position:absolute; left:0; top:50%; margin-top:-3px;
     width:6px; height:6px; border-radius:50%; background:var(--accent);
   }
-  .tb-photo{height:150px; border-bottom:1px solid var(--line); position:relative; overflow:hidden;}
+  .tb-photo{height:210px; border-bottom:1px solid var(--line); position:relative; overflow:hidden;}
   .tb-photo svg{width:100%; height:100%; display:block;}
 
   /* ---------- ABOUT ---------- */
@@ -243,8 +246,11 @@
   .process .step p{color:var(--ink-soft); font-size:0.87rem; line-height:1.5;}
 
   .team{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:24px;}
-  .person{border:1px solid var(--line); padding:22px;}
-  .avatar-wrap{position:relative; width:56px; height:56px; border-radius:50%; overflow:hidden; border:1px solid var(--line); margin-bottom:14px;}
+  .person{border:1px solid var(--line); padding:22px; position:relative;}
+  .person::before, .person::after{content:''; position:absolute; width:10px; height:10px; pointer-events:none;}
+  .person::before{top:-1px; left:-1px; border-top:1px solid var(--blue); border-left:1px solid var(--blue);}
+  .person::after{bottom:-1px; right:-1px; border-bottom:1px solid var(--blue); border-right:1px solid var(--blue);}
+  .avatar-wrap{position:relative; width:96px; height:96px; border-radius:50%; overflow:hidden; border:1px solid var(--line); margin-bottom:14px;}
   .avatar-wrap img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(1) contrast(1.05);}
   .avatar-wrap::after{content:''; position:absolute; inset:0; background:var(--duo); mix-blend-mode:color;}
   .person h3{font-size:1.02rem; font-family:'IBM Plex Sans', sans-serif; font-weight:600;}
@@ -272,10 +278,13 @@
   }
   .field input:focus, .field select:focus, .field textarea:focus{outline:2px solid var(--blue); outline-offset:1px;}
   .field textarea{resize:vertical; min-height:110px;}
-  .contact-info-card{background:var(--ink); color:var(--paper); padding:32px;}
-  .contact-info-card .row{display:flex; justify-content:space-between; gap:12px; padding:12px 0; border-bottom:1px solid rgba(241,238,230,0.16);}
+  .contact-info-card{background:var(--paper); color:var(--ink); padding:32px; border:1px solid var(--line); position:relative;}
+  .contact-info-card::before, .contact-info-card::after{content:''; position:absolute; width:10px; height:10px; pointer-events:none;}
+  .contact-info-card::before{top:-1px; left:-1px; border-top:1px solid var(--blue); border-left:1px solid var(--blue);}
+  .contact-info-card::after{bottom:-1px; right:-1px; border-bottom:1px solid var(--blue); border-right:1px solid var(--blue);}
+  .contact-info-card .row{display:flex; justify-content:space-between; gap:12px; padding:12px 0; border-bottom:1px solid var(--line);}
   .contact-info-card .row:last-child{border-bottom:none;}
-  .contact-info-card .row .k{font-family:'IBM Plex Mono', monospace; font-size:0.68rem; color:rgba(241,238,230,0.6); text-transform:uppercase; letter-spacing:0.06em;}
+  .contact-info-card .row .k{font-family:'IBM Plex Mono', monospace; font-size:0.68rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.06em;}
   .contact-info-card .row .v{font-size:0.92rem; text-align:right;}
   .confirm-msg{display:none; margin-top:16px; padding:13px 16px; border:1px solid var(--blue); background:rgba(217,67,46,0.08); color:var(--blue-deep); font-size:0.9rem;}
   .confirm-msg.show{display:block;}
@@ -380,14 +389,14 @@
       <div><div class="num">2022</div><div class="lbl">Founded</div></div>
       <div><div class="num">Chi &rarr; NOLA</div><div class="lbl">Studio roots</div></div>
       <div><div class="num">National</div><div class="lbl">Project reach</div></div>
-      <div><div class="num">4</div><div class="lbl">Sectors served</div></div>
+      <div><div class="num">6</div><div class="lbl">Sectors served</div></div>
       <div><div class="num">100%</div><div class="lbl">BIM-modeled projects</div></div>
     </div>
 
     <section>
       <div class="sec-head">
         <span class="eyebrow">Sectors</span>
-        <h2>Workplace, hospitality, retail, and dispensary design.</h2>
+        <h2>Workplace, hospitality, retail, cannabis, and residential design.</h2>
         <p>Every sector we work in comes with its own codes, its own users, and its own definition of a good day. We design for the one you're actually running.</p>
       </div>
       <div class="tb-grid" id="sectorsGrid">
@@ -461,7 +470,7 @@
           <div class="about-fact"><div class="k">Founded</div><div class="v">2022, Chicago — now New Orleans</div></div>
           <div class="about-fact"><div class="k">Led by</div><div class="v">Aleks Furman, Founder &amp; Principal</div></div>
           <div class="about-fact"><div class="k">Reach</div><div class="v">National, HQ in New Orleans, LA</div></div>
-          <div class="about-fact"><div class="k">Focus</div><div class="v">Workplace, hospitality, retail, dispensary</div></div>
+          <div class="about-fact"><div class="k">Focus</div><div class="v">Workplace, hospitality, retail, cannabis, residential</div></div>
         </div>
       </div>
     </section>
@@ -493,33 +502,6 @@
         <div class="step"><div class="n">02 / DESIGN</div><h3>Design development</h3><p>Materials and finishes developed in BIM, with photorealistic renders and fly-throughs so you see the space before it's built.</p></div>
         <div class="step"><div class="n">03 / DOCUMENTS</div><h3>Construction documentation</h3><p>Drawings accurate enough for general contractors to bid and build from with confidence.</p></div>
         <div class="step"><div class="n">04 / ADMIN</div><h3>Construction administration</h3><p>On-site coordination through completion, keeping the build aligned to the design.</p></div>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <section>
-      <div class="sec-head">
-        <span class="eyebrow">The team</span>
-        <h2>A small, collaborative studio.</h2>
-        <p>Eight people across design, technical, and operations. <a href="#" onclick="goTo('contact');return false;" style="text-decoration:underline;">See the full directory</a>.</p>
-      </div>
-      <div class="team">
-        <div class="person">
-          <h3>Aleks Furman</h3>
-          <div class="role">Founder &amp; principal</div>
-          <p>Leads studio direction and client relationships from concept through construction.</p>
-        </div>
-        <div class="person">
-          <h3>Brian Waits</h3>
-          <div class="role">Senior architect</div>
-          <p>Leads technical architecture across schematic planning, documentation, and code compliance.</p>
-        </div>
-        <div class="person">
-          <h3>M&eacute;linda Cohen</h3>
-          <div class="role">Design lead, objects</div>
-          <p>Directs furniture, fixtures, and material selection across active projects.</p>
-        </div>
       </div>
     </section>
   </section>
@@ -580,8 +562,8 @@
   <section class="page" id="page-work">
     <section>
       <span class="eyebrow">Selected work</span>
-      <h1 style="font-size:clamp(1.9rem,3.4vw,2.4rem); margin:14px 0 16px;">Projects across four sectors.</h1>
-      <p style="color:var(--ink-soft); font-size:1rem; max-width:60ch; margin-bottom:30px; line-height:1.6;">A cross-section of workplace, hospitality, retail, and dispensary projects, filtered by sector below.</p>
+      <h1 style="font-size:clamp(1.9rem,3.4vw,2.4rem); margin:14px 0 16px;">Projects across six sectors.</h1>
+      <p style="color:var(--ink-soft); font-size:1rem; max-width:60ch; margin-bottom:30px; line-height:1.6;">A cross-section of workplace, hospitality, retail, cannabis, and residential projects, filtered by sector below.</p>
 
       <div class="filters" id="filters">
         <button class="active" data-filter="all">All</button>
@@ -598,8 +580,36 @@
           <div class="tb-photo" style="background:var(--panel);">
             <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="150" y1="10" x2="150" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="75" x2="150" y2="75" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Warehouse District HQ</h3><p>Full-floor office buildout for a growing professional services firm.</p></div>
+          <div class="tb-body"><h3>Eurofins &mdash; Central Analytical Labs</h3><p>Elevator lobbies and conference rooms for a central analytical lab.</p></div>
           <div class="tb-meta"><span>Workplace</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Workplace">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="100" height="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="170" y="80" width="100" height="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Raven &mdash; New Orleans HQ</h3><p>Headquarters build-out for Raven's New Orleans office.</p></div>
+          <div class="tb-meta"><span>Workplace</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Workplace">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="55" x2="290" y2="55" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="95" x2="290" y2="95" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Flex &mdash; New Orleans HQ</h3><p>Flex Design Studio's own New Orleans headquarters.</p></div>
+          <div class="tb-meta"><span>Workplace</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Workplace">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><circle cx="230" cy="75" r="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Amata Express</h3><p>Workplace build-out for Amata Express.</p></div>
+          <div class="tb-meta"><span>Workplace</span><span>Location TBD</span></div>
+        </div>
+        <div class="tb-card" data-sector="Workplace">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="40" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="200" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Center Staging &mdash; Office Expansion</h3><p>Office expansion for Center Staging.</p></div>
+          <div class="tb-meta"><span>Workplace</span><span>Location TBD</span></div>
         </div>
         <div class="tb-card" data-sector="Hospitality">
           <div class="tb-photo">
@@ -622,12 +632,33 @@
           <div class="tb-body"><h3>Chicory Rooftop Lounge</h3><p>A rooftop addition for the beloved Chicory event venue, with a woven sail-shade canopy, bamboo privacy screening, and a corrugated-metal bar overlooking the skyline.</p></div>
           <div class="tb-meta"><span>Hospitality</span><span>Rooftop expansion</span></div>
         </div>
-        <div class="tb-card" data-sector="Retail">
+        <div class="tb-card" data-sector="Hospitality">
           <div class="tb-photo" style="background:var(--panel);">
-            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="40" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="200" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><circle cx="230" cy="75" r="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Magazine Street Flagship</h3><p>Storefront and showroom redesign for a national apparel brand.</p></div>
-          <div class="tb-meta"><span>Retail</span><span>New Orleans, LA</span></div>
+          <div class="tb-body"><h3>Bywater Bar</h3><p>A neighborhood bar build-out in the Bywater.</p></div>
+          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Hospitality">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><circle cx="230" cy="75" r="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Bywater Music Venue</h3><p>A live music venue build-out in the Bywater.</p></div>
+          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Hospitality">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><circle cx="230" cy="75" r="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Bywater Recording Studio / Practice Space</h3><p>A recording studio and practice space build-out in the Bywater.</p></div>
+          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Hospitality">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><circle cx="230" cy="75" r="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Creole Restaurant</h3><p>A restaurant build-out for a confidential client.</p></div>
+          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
         </div>
         <div class="tb-card" data-sector="Dispensary">
           <div class="tb-photo">
@@ -652,52 +683,129 @@
         </div>
         <div class="tb-card" data-sector="Dispensary">
           <div class="tb-photo">
+            <img src="images/green-cup-02.jpg" alt="Green Cup dispensary — retail floor with green tile and illuminated display wall" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="tb-body"><h3>Green Cup</h3><p>A glazed green-tile display wall and oak millwork anchor this Bronx dispensary, with terrazzo flooring and a glowing marquee sign.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>Bronx, NY</span></div>
+        </div>
+        <div class="tb-card" data-sector="Dispensary">
+          <div class="tb-photo">
+            <img src="images/cloudhaven-06.jpg" alt="Cloudhaven Dispensary — reception hallway with ombr&eacute; blue ceiling" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="tb-body"><h3>Cloudhaven Dispensary</h3><p>A branded reception hallway with a graduated blue ceiling and wood slat beams, designed around full ADA-accessible circulation.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>South Beloit, IL</span></div>
+        </div>
+        <div class="tb-card" data-sector="Dispensary">
+          <div class="tb-photo">
+            <img src="images/grasshopper-02.jpg" alt="Grasshopper Club dispensary — curved retail counter with living wall" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="tb-body"><h3>Grasshopper Club &mdash; South Loop</h3><p>A curved wood retail counter and reeded-glass partitions set against exposed brick, designed for a high-traffic Chicago storefront.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>Chicago, IL</span></div>
+        </div>
+        <div class="tb-card" data-sector="Dispensary">
+          <div class="tb-photo">
             <img src="images/ags-05.jpg" alt="AGS Dispensary concept — retail floor with terrazzo display islands" style="width:100%; height:100%; object-fit:cover;">
           </div>
           <div class="tb-body"><h3>AGS Dispensary Concept</h3><p>A design concept pairing brass-framed terrazzo display islands with oak millwork and black corrugated metal, for a dispensary with a boutique-retail feel.</p></div>
           <div class="tb-meta"><span>Dispensary</span><span>Saddle Brook, NJ</span></div>
         </div>
         <div class="tb-card" data-sector="Dispensary">
-          <div class="tb-photo">
-            <img src="images/cloudhaven-06.jpg" alt="Cloudhaven Dispensary concept — reception hallway with ombr&eacute; blue ceiling" style="width:100%; height:100%; object-fit:cover;">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="55" x2="290" y2="55" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="95" x2="290" y2="95" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Cloudhaven Dispensary Concept</h3><p>A branded reception hallway with a graduated blue ceiling and wood slat beams, designed around full ADA-accessible circulation.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>South Beloit, IL</span></div>
+          <div class="tb-body"><h3>Dominica</h3><p>A cannabis dispensary build-out.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>Location TBD</span></div>
         </div>
         <div class="tb-card" data-sector="Dispensary">
-          <div class="tb-photo">
-            <img src="images/grasshopper-02.jpg" alt="Grasshopper Club dispensary concept — curved retail counter with living wall" style="width:100%; height:100%; object-fit:cover;">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="55" x2="290" y2="55" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="95" x2="290" y2="95" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Grasshopper Club &mdash; South Loop</h3><p>A curved wood retail counter and reeded-glass partitions set against exposed brick, designed for a high-traffic Chicago storefront.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>Chicago, IL</span></div>
+          <div class="tb-body"><h3>Terrabis &mdash; Hazelwood, MO</h3><p>A fourth Terrabis location, carrying the brand's topographic identity into Missouri.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>Hazelwood, MO</span></div>
         </div>
         <div class="tb-card" data-sector="Grow">
           <div class="tb-photo" style="background:var(--panel);">
             <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="60" y1="10" x2="60" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="110" y1="10" x2="110" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="160" y1="10" x2="160" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="210" y1="10" x2="210" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="260" y1="10" x2="260" y2="140" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Chalmette Cultivation Facility</h3><p>Grow-room layout and processing workflow designed around code compliance and product security.</p></div>
-          <div class="tb-meta"><span>Grow &amp; mfg</span><span>Chalmette, LA</span></div>
+          <div class="tb-body"><h3>Terrabis &mdash; KC Manufacturing Facility</h3><p>Cultivation and manufacturing workflow design carrying the Terrabis brand into a production facility.</p></div>
+          <div class="tb-meta"><span>Grow &amp; mfg</span><span>Kansas City, MO</span></div>
         </div>
-        <div class="tb-card" data-sector="Workplace">
+        <div class="tb-card" data-sector="Grow">
           <div class="tb-photo" style="background:var(--panel);">
-            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="100" height="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="170" y="80" width="100" height="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="60" y1="10" x2="60" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="110" y1="10" x2="110" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="160" y1="10" x2="160" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="210" y1="10" x2="210" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="260" y1="10" x2="260" y2="140" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Bywater Coworking Loft</h3><p>Adaptive reuse of a warehouse floor into flexible shared office space.</p></div>
-          <div class="tb-meta"><span>Workplace</span><span>New Orleans, LA</span></div>
+          <div class="tb-body"><h3>Battle Green</h3><p>A cannabis cultivation and manufacturing facility.</p></div>
+          <div class="tb-meta"><span>Grow &amp; mfg</span><span>East Orange, NJ</span></div>
         </div>
-        <div class="tb-card" data-sector="Hospitality">
+        <div class="tb-card" data-sector="Grow">
           <div class="tb-photo" style="background:var(--panel);">
-            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><path d="M60 10 V140 M180 10 V140" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="60" y1="10" x2="60" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="110" y1="10" x2="110" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="160" y1="10" x2="160" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="210" y1="10" x2="210" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="260" y1="10" x2="260" y2="140" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Boutique Hotel Lobby</h3><p>Lobby and lounge redesign for a 40-room independent hotel.</p></div>
-          <div class="tb-meta"><span>Hospitality</span><span>Chicago, IL</span></div>
+          <div class="tb-body"><h3>AGS</h3><p>A cannabis cultivation and manufacturing facility.</p></div>
+          <div class="tb-meta"><span>Grow &amp; mfg</span><span>Burlington, NJ</span></div>
         </div>
         <div class="tb-card" data-sector="Residential">
           <div class="tb-photo" style="background:var(--panel);">
             <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="70" height="50" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="120" y="30" width="70" height="90" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="210" y="60" width="60" height="60" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Garden District Renovation</h3><p>Full-home renovation balancing historic character with a livable, modern layout.</p></div>
+          <div class="tb-body"><h3>830 Foucher</h3><p>A full-home renovation on Foucher Street.</p></div>
           <div class="tb-meta"><span>Residential</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Residential">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="70" height="50" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="120" y="30" width="70" height="90" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="210" y="60" width="60" height="60" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>2523 Prytania</h3><p>A full-home renovation on Prytania Street.</p></div>
+          <div class="tb-meta"><span>Residential</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Residential">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="70" height="50" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="120" y="30" width="70" height="90" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="210" y="60" width="60" height="60" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>1265 Esplanade</h3><p>A full-home renovation on Esplanade Avenue.</p></div>
+          <div class="tb-meta"><span>Residential</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Residential">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="70" height="50" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="120" y="30" width="70" height="90" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="210" y="60" width="60" height="60" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>8638 Trout Ave.</h3><p>A residential renovation in Kings Beach.</p></div>
+          <div class="tb-meta"><span>Residential</span><span>Kings Beach, CA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Residential">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="70" height="50" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="120" y="30" width="70" height="90" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="210" y="60" width="60" height="60" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Solomon St.</h3><p>A full-home renovation on Solomon Street.</p></div>
+          <div class="tb-meta"><span>Residential</span><span>Location TBD</span></div>
+        </div>
+        <div class="tb-card" data-sector="Retail">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="40" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="200" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Resistance Lagree &mdash; Milwaukee Ave</h3><p>A boutique fitness studio build-out on Milwaukee Avenue.</p></div>
+          <div class="tb-meta"><span>Retail</span><span>Chicago, IL</span></div>
+        </div>
+        <div class="tb-card" data-sector="Retail">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="40" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="200" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Resistance Lagree &mdash; Addison Ave</h3><p>A second Resistance Lagree studio build-out on Addison Avenue.</p></div>
+          <div class="tb-meta"><span>Retail</span><span>Chicago, IL</span></div>
+        </div>
+        <div class="tb-card" data-sector="Retail">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="40" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="200" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>GGI Booth</h3><p>A trade show booth design for GGI.</p></div>
+          <div class="tb-meta"><span>Retail</span><span>Location TBD</span></div>
+        </div>
+        <div class="tb-card" data-sector="Retail">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="40" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="200" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>KI Showroom</h3><p>A furniture showroom build-out for KI.</p></div>
+          <div class="tb-meta"><span>Retail</span><span>Location TBD</span></div>
         </div>
       </div>
     </section>
@@ -725,10 +833,7 @@
         Elfsight works the same way: sign up, connect Instagram + LinkedIn,
         paste their <div class="elfsight-app-..."> + <script> in the same spots.
       -->
-      <div id="liveSocialFeed" style="border:1px dashed var(--line-strong); padding:40px 24px; text-align:center; margin-bottom:34px;">
-        <p class="eyebrow" style="justify-content:center; margin-bottom:10px;">Live feed</p>
-        <p style="color:var(--ink-soft); font-size:0.92rem; max-width:44ch; margin:0 auto;">This spot is ready for a live Instagram + LinkedIn feed. Connect a feed widget (Juicer.io or Elfsight) and drop the embed code in here — see the setup notes in the page source.</p>
-      </div>
+      <ul class="juicer-feed" data-feed-id="flexdesignstudio_nola" style="margin-bottom:34px;"></ul>
 
       <div class="filters" id="newsFilters">
         <button class="active" data-filter="all">All</button>
@@ -847,49 +952,49 @@
 
       <div class="team" style="margin-bottom:48px;">
         <div class="person">
-          <div class="avatar-wrap" style="--duo: #E2591F;"><img src="https://static.wixstatic.com/media/cfa116_ad919b6f5ed04eebb57846825a88f8c7~mv2.jpg/v1/fill/w_84,h_85,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/AF%20HEADSHOT%202_edited.jpg" alt="Aleks Furman"></div>
+          <div class="avatar-wrap" style="--duo: #E2591F;"><img src="https://static.wixstatic.com/media/cfa116_ad919b6f5ed04eebb57846825a88f8c7~mv2.jpg/v1/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/AF%20HEADSHOT%202_edited.jpg" alt="Aleks Furman"></div>
           <h3>Aleks Furman</h3>
           <div class="role">Founder / Principal</div>
           <p><a href="tel:+13128234356">312.823.4356</a><br><a href="mailto:aleks@flexdesignstudio.com">aleks@flexdesignstudio.com</a></p>
         </div>
         <div class="person">
-          <div class="avatar-wrap" style="--duo: #5FC9C0;"><img src="https://static.wixstatic.com/media/cfa116_c974f8a1565948b3bcd2f10b107e6e1d~mv2.jpg/v1/crop/x_15,y_0,w_196,h_224/fill/w_84,h_85,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/download%20(2)_edited_edited.jpg" alt="Josh Beck"></div>
-          <h3>Josh Beck</h3>
-          <div class="role">Technical</div>
-          <p><a href="tel:+17138767738">713.876.7738</a><br><a href="mailto:josh@flexdesignstudio.com">josh@flexdesignstudio.com</a></p>
-        </div>
-        <div class="person">
-          <div class="avatar-wrap" style="--duo: #FF3E9E;"><img src="https://static.wixstatic.com/media/cfa116_a28af20476ea4f139fc0f1ebb50eab99~mv2.jpg/v1/crop/x_16,y_0,w_204,h_217/fill/w_84,h_85,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/download_edited.jpg" alt="Mélinda Cohen"></div>
-          <h3>M&eacute;linda Cohen</h3>
-          <div class="role">Design lead, objects</div>
-          <p><a href="tel:+15044620206">504.462.0206</a><br><a href="mailto:melinda@flexdesignstudio.com">melinda@flexdesignstudio.com</a></p>
-        </div>
-        <div class="person">
-          <div class="avatar-wrap" style="--duo: #33447A;"><img src="https://static.wixstatic.com/media/cfa116_fed31462358b4027a4bde5aa7eaeb0b5~mv2.jpg/v1/crop/x_0,y_155,w_1906,h_2231/fill/w_84,h_85,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_2413_edited.jpg" alt="Brian Waits"></div>
-          <h3>Brian Waits</h3>
-          <div class="role">Senior architect</div>
-          <p><a href="tel:+15043834040">504.383.4040</a><br><a href="mailto:brian@flexdesignstudio.com">brian@flexdesignstudio.com</a></p>
-        </div>
-        <div class="person">
-          <div class="avatar-wrap" style="--duo: #FF3B4E;"><img src="https://static.wixstatic.com/media/cfa116_53c4d68e508d4d84a5603e18f1461871~mv2.jpg/v1/crop/x_1,y_0,w_1012,h_1024/fill/w_84,h_85,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DL%20Headshot_edited.jpg" alt="Darius LeBeaux"></div>
+          <div class="avatar-wrap" style="--duo: #FF3B4E;"><img src="https://static.wixstatic.com/media/cfa116_53c4d68e508d4d84a5603e18f1461871~mv2.jpg/v1/crop/x_1,y_0,w_1012,h_1024/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DL%20Headshot_edited.jpg" alt="Darius LeBeaux"></div>
           <h3>Darius LeBeaux</h3>
           <div class="role">Interior designer</div>
           <p><a href="tel:+15043434096">504.343.4096</a><br><a href="mailto:darius@flexdesignstudio.com">darius@flexdesignstudio.com</a></p>
         </div>
         <div class="person">
-          <div class="avatar-wrap" style="--duo: #2FA187;"><img src="https://static.wixstatic.com/media/cfa116_e7a3d5fd1e784d1c83b48f4210206c8f~mv2.jpg/v1/crop/x_31,y_0,w_173,h_199/fill/w_84,h_85,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/download%20(3)_edited.jpg" alt="Sundae Colletti"></div>
-          <h3>Sundae Colletti</h3>
-          <div class="role">Accounting / HR</div>
-          <p><a href="tel:+16097518959">609.751.8959</a><br><a href="mailto:info@flexdesignstudio.com">info@flexdesignstudio.com</a></p>
+          <div class="avatar-wrap" style="--duo: #33447A;"><img src="https://static.wixstatic.com/media/cfa116_fed31462358b4027a4bde5aa7eaeb0b5~mv2.jpg/v1/crop/x_0,y_155,w_1906,h_2231/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_2413_edited.jpg" alt="Brian Waits"></div>
+          <h3>Brian Waits</h3>
+          <div class="role">Senior architect</div>
+          <p><a href="tel:+15043834040">504.383.4040</a><br><a href="mailto:brian@flexdesignstudio.com">brian@flexdesignstudio.com</a></p>
         </div>
         <div class="person">
-          <div class="avatar-wrap" style="--duo: #8B3ED8;"><img src="https://static.wixstatic.com/media/cfa116_e248f1ab5fc3448f87aceb5c81696976~mv2.jpg/v1/crop/x_25,y_4,w_183,h_202/fill/w_84,h_85,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/download%20(1)_edited.jpg" alt="Chris Berends"></div>
+          <div class="avatar-wrap" style="--duo: #8B3ED8;"><img src="https://static.wixstatic.com/media/cfa116_e248f1ab5fc3448f87aceb5c81696976~mv2.jpg/v1/crop/x_25,y_4,w_183,h_202/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/download%20(1)_edited.jpg" alt="Chris Berends"></div>
           <h3>Chris Berends</h3>
           <div class="role">Operations</div>
           <p><a href="tel:+16097518959">609.751.8959</a><br><a href="mailto:chris@flexdesignstudio.com">chris@flexdesignstudio.com</a></p>
         </div>
         <div class="person">
-          <div class="avatar-wrap" style="--duo: linear-gradient(135deg, #3E7BFF, #9B3EFF);"><img src="https://static.wixstatic.com/media/11062b_a899d943c4e74e8bac3fce7456709abc~mv2.jpg/v1/crop/x_596,y_0,w_1828,h_1824/fill/w_84,h_85,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Blue%20Gradient%20Abstract%20Art.jpg" alt="Bronwen Wyatt"></div>
+          <div class="avatar-wrap" style="--duo: #5FC9C0;"><img src="https://static.wixstatic.com/media/cfa116_c974f8a1565948b3bcd2f10b107e6e1d~mv2.jpg/v1/crop/x_15,y_0,w_196,h_224/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/download%20(2)_edited_edited.jpg" alt="Josh Beck"></div>
+          <h3>Josh Beck</h3>
+          <div class="role">Technical</div>
+          <p><a href="tel:+17138767738">713.876.7738</a><br><a href="mailto:josh@flexdesignstudio.com">josh@flexdesignstudio.com</a></p>
+        </div>
+        <div class="person">
+          <div class="avatar-wrap" style="--duo: #FF3E9E;"><img src="https://static.wixstatic.com/media/cfa116_a28af20476ea4f139fc0f1ebb50eab99~mv2.jpg/v1/crop/x_16,y_0,w_204,h_217/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/download_edited.jpg" alt="Mélinda Cohen"></div>
+          <h3>M&eacute;linda Cohen</h3>
+          <div class="role">Design lead, objects</div>
+          <p><a href="tel:+15044620206">504.462.0206</a><br><a href="mailto:melinda@flexdesignstudio.com">melinda@flexdesignstudio.com</a></p>
+        </div>
+        <div class="person">
+          <div class="avatar-wrap" style="--duo: #2FA187;"><img src="https://static.wixstatic.com/media/cfa116_e7a3d5fd1e784d1c83b48f4210206c8f~mv2.jpg/v1/crop/x_31,y_0,w_173,h_199/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/download%20(3)_edited.jpg" alt="Sundae Colletti"></div>
+          <h3>Sundae Colletti</h3>
+          <div class="role">Accounting / HR</div>
+          <p><a href="tel:+16097518959">609.751.8959</a><br><a href="mailto:info@flexdesignstudio.com">info@flexdesignstudio.com</a></p>
+        </div>
+        <div class="person">
+          <div class="avatar-wrap" style="--duo: linear-gradient(135deg, #3E7BFF, #9B3EFF);"><img src="https://static.wixstatic.com/media/11062b_a899d943c4e74e8bac3fce7456709abc~mv2.jpg/v1/crop/x_596,y_0,w_1828,h_1824/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Blue%20Gradient%20Abstract%20Art.jpg" alt="Bronwen Wyatt"></div>
           <h3>Bronwen Wyatt</h3>
           <div class="role">PR &amp; media partner</div>
           <p><a href="tel:+13128234356">312.823.4356</a><br><a href="mailto:info@flexdesignstudio.com">info@flexdesignstudio.com</a></p>
@@ -1012,6 +1117,8 @@
 
   goTo('home');
 </script>
+
+<script type="text/javascript" src="https://www.juicer.io/embed/flexdesignstudio_nola/embed-code.js" async defer></script>
 
 </body>
 </html>
