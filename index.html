@@ -361,11 +361,13 @@
   .confirm-msg{display:none; margin-top:16px; padding:13px 16px; border:1px solid var(--blue); background:rgba(217,67,46,0.08); color:var(--blue-deep); font-size:0.9rem;}
   .confirm-msg.show{display:block;}
 
-  /* Starter overrides for a Juicer.io feed once embedded — refine after the
-     real widget is in place, class names below match Juicer's public markup */
+  /* Juicer.io feed overrides — class names match Juicer's public markup */
   .juicer-feed{background:transparent !important; padding:0 !important;}
   .juicer-feed .referral{display:none !important;}
   .juicer-feed .j-poster{border:1px solid var(--line) !important; border-radius:0 !important; box-shadow:none !important;}
+  /* feed is capped at 8 posts / 1 page, so the paginator has nothing to load */
+  .juicer-feed .j-paginate,
+  .juicer-feed .juicer-button{display:none !important;}
 
   /* ---------- PROJECT MODAL ---------- */
   #workGrid .tb-card{cursor:pointer;}
@@ -989,7 +991,7 @@
         Elfsight works the same way: sign up, connect Instagram + LinkedIn,
         paste their <div class="elfsight-app-..."> + <script> in the same spots.
       -->
-      <ul class="juicer-feed" data-feed-id="flexdesignstudio_nola" style="margin-bottom:34px;"></ul>
+      <ul class="juicer-feed" data-feed-id="flexdesignstudio_nola" data-per="8" data-pages="1" data-columns="4" style="margin-bottom:34px;"></ul>
 
       <div class="filters" id="newsFilters">
         <button class="active" data-filter="all">All</button>
