@@ -368,6 +368,22 @@
   /* feed is capped at 8 posts / 1 page, so the paginator has nothing to load */
   .juicer-feed .j-paginate,
   .juicer-feed .juicer-button{display:none !important;}
+  /* Lock the feed to 2 rows regardless of how many columns Juicer renders.
+     Juicer lays posts out as .feed-item children; we hide any past 2 rows. */
+  .juicer-feed li.feed-item{display:none !important;}          /* hide all first */
+  .juicer-feed li.feed-item:nth-child(-n+8){display:block !important;}   /* 4 cols -> 8 = 2 rows */
+  @media (max-width: 1000px){
+    .juicer-feed li.feed-item:nth-child(-n+8){display:none !important;}
+    .juicer-feed li.feed-item:nth-child(-n+6){display:block !important;} /* 3 cols -> 6 */
+  }
+  @media (max-width: 720px){
+    .juicer-feed li.feed-item:nth-child(-n+6){display:none !important;}
+    .juicer-feed li.feed-item:nth-child(-n+4){display:block !important;} /* 2 cols -> 4 */
+  }
+  @media (max-width: 480px){
+    .juicer-feed li.feed-item:nth-child(-n+4){display:none !important;}
+    .juicer-feed li.feed-item:nth-child(-n+2){display:block !important;} /* 1 col -> 2 */
+  }
 
   /* ---------- PROJECT MODAL ---------- */
   #workGrid .tb-card{cursor:pointer;}
@@ -979,7 +995,7 @@
         Elfsight works the same way: sign up, connect Instagram + LinkedIn,
         paste their <div class="elfsight-app-..."> + <script> in the same spots.
       -->
-      <ul class="juicer-feed" data-feed-id="flexdesignstudio_nola" data-per="8" data-pages="1" data-columns="4" style="margin-bottom:34px;"></ul>
+      <ul class="juicer-feed" data-feed-id="flexdesignstudio_nola" data-per="10" data-pages="1" data-columns="4" style="margin-bottom:34px;"></ul>
 
       <div class="filters" id="newsFilters">
         <button class="active" data-filter="all">All</button>
