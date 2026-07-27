@@ -360,6 +360,10 @@
   .contact-info-card .row .v{font-size:0.92rem; text-align:right;}
   .confirm-msg{display:none; margin-top:16px; padding:13px 16px; border:1px solid var(--blue); background:rgba(217,67,46,0.08); color:var(--blue-deep); font-size:0.9rem;}
   .confirm-msg.show{display:block;}
+  .contact-email-cta{display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:8px 0;}
+  .contact-email-cta .contact-email-link{font-size:clamp(1.35rem,3vw,1.9rem); font-weight:600; color:var(--ink); text-decoration:none; margin:12px 0 18px; border-bottom:2px solid var(--blue); padding-bottom:3px; word-break:break-all;}
+  .contact-email-cta .contact-email-link:hover{color:var(--blue-deep);}
+  .contact-email-cta p{color:var(--ink-soft); font-size:0.98rem; line-height:1.6; max-width:44ch; margin-bottom:24px;}
 
   /* Juicer.io feed overrides — class names match Juicer's public markup */
   .juicer-feed{background:transparent !important; padding:0 !important;}
@@ -1247,46 +1251,20 @@
     <section>
       <span class="eyebrow">Contact</span>
       <h1 style="font-size:clamp(1.9rem,3.4vw,2.4rem); margin:14px 0 16px;">Say hello.</h1>
-      <p style="color:var(--ink-soft); font-size:1rem; max-width:60ch; margin-bottom:36px; line-height:1.6;">Share the sector, the timeline, and where the project currently stands — or reach out to someone on the team directly below. We reply within two business days.</p>
+      <p style="color:var(--ink-soft); font-size:1rem; max-width:60ch; margin-bottom:36px; line-height:1.6;">Tell us the sector, the timeline, and where the project currently stands — or reach out to someone on the team directly below. We reply within two business days.</p>
 
       <div class="contact-grid" style="margin-bottom:48px;">
-        <form id="contactForm" onsubmit="handleSubmit(event)">
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Jordan Ellis" required>
-          </div>
-          <div class="field">
-            <label for="company">Company</label>
-            <input type="text" id="company" placeholder="Company or brand name">
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="jordan@company.com" required>
-          </div>
-          <div class="field">
-            <label for="sector">Sector</label>
-            <select id="sector">
-              <option>Workplace</option>
-              <option>Hospitality</option>
-              <option>Retail</option>
-              <option>Cannabis dispensary</option>
-              <option>Cannabis grow / manufacturing</option>
-              <option>Residential</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Project details</label>
-            <textarea id="message" placeholder="Project phase, rough square footage, location, timeline..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-solid">Send message</button>
-          <div class="confirm-msg" id="confirmMsg">Message received. We'll follow up within two business days.</div>
-        </form>
+        <div class="contact-email-cta">
+          <span class="eyebrow">Start a conversation</span>
+          <a class="contact-email-link" href="mailto:aleks@flexdesignstudio.com?subject=New%20project%20inquiry">aleks@flexdesignstudio.com</a>
+          <p>Send us a note with the project sector, rough square footage, location, and timeline, and we'll follow up within two business days.</p>
+          <a class="btn btn-solid" href="mailto:aleks@flexdesignstudio.com?subject=New%20project%20inquiry">Email the studio</a>
+        </div>
 
         <div class="contact-info-card">
           <div class="row"><span class="k">Studio</span><span class="v">1242 Montegut St<br>New Orleans, LA 70117</span></div>
           <div class="row"><span class="k">Phone</span><span class="v">(504) 233-4338</span></div>
-          <div class="row"><span class="k">Email</span><span class="v">aleks@flexdesignstudio.com</span></div>
+          <div class="row"><span class="k">Email</span><span class="v"><a href="mailto:aleks@flexdesignstudio.com">aleks@flexdesignstudio.com</a></span></div>
           <div class="row"><span class="k">Instagram</span><span class="v">@flexdesignstudio_nola</span></div>
           <div class="row"><span class="k">LinkedIn</span><span class="v">flex-design-studio</span></div>
           <div class="row"><span class="k">Facebook</span><span class="v">FLEX Design Studio</span></div>
@@ -1411,11 +1389,6 @@
   document.getElementById('burgerBtn').addEventListener('click', function(){
     document.getElementById('navLinks').classList.toggle('open');
   });
-  function handleSubmit(e){
-    e.preventDefault();
-    document.getElementById('confirmMsg').classList.add('show');
-    document.getElementById('contactForm').reset();
-  }
   function wireFilter(filterId, gridId, dataAttr){
     document.querySelectorAll('#' + filterId + ' button').forEach(function(btn){
       btn.addEventListener('click', function(){
