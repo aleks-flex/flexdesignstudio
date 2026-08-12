@@ -1254,12 +1254,43 @@
       <p style="color:var(--ink-soft); font-size:1rem; max-width:60ch; margin-bottom:36px; line-height:1.6;">Tell us the sector, the timeline, and where the project currently stands — or reach out to someone on the team directly below. We reply within two business days.</p>
 
       <div class="contact-grid" style="margin-bottom:48px;">
-        <div class="contact-email-cta">
-          <span class="eyebrow">Start a conversation</span>
-          <a class="contact-email-link" href="mailto:aleks@flexdesignstudio.com?subject=New%20project%20inquiry">aleks@flexdesignstudio.com</a>
-          <p>Send us a note with the project sector, rough square footage, location, and timeline, and we'll follow up within two business days.</p>
-          <a class="btn btn-solid" href="mailto:aleks@flexdesignstudio.com?subject=New%20project%20inquiry">Email the studio</a>
-        </div>
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="9227f371-7e8b-4e3b-be93-7fe289012020">
+          <input type="hidden" name="subject" value="New project inquiry — flexdesignstudio.com">
+          <input type="hidden" name="from_name" value="Flex Design Studio website">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Jordan Ellis" required>
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Company or brand name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jordan@company.com" required>
+          </div>
+          <div class="field">
+            <label for="sector">Sector</label>
+            <select id="sector" name="sector">
+              <option>Workplace</option>
+              <option>Hospitality</option>
+              <option>Retail</option>
+              <option>Cannabis dispensary</option>
+              <option>Cannabis grow / manufacturing</option>
+              <option>Residential</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" placeholder="Project phase, rough square footage, location, timeline..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid">Send message</button>
+          <div class="confirm-msg" id="confirmMsg">Message received. We'll follow up within two business days.</div>
+          <div class="confirm-msg" id="errorMsg" style="border-color:var(--ink-soft); color:var(--ink);">Something went wrong. Please email us directly at aleks@flexdesignstudio.com.</div>
+        </form>
 
         <div class="contact-info-card">
           <div class="row"><span class="k">Studio</span><span class="v">1242 Montegut St<br>New Orleans, LA 70117</span></div>
@@ -1389,6 +1420,33 @@
   document.getElementById('burgerBtn').addEventListener('click', function(){
     document.getElementById('navLinks').classList.toggle('open');
   });
+  (function(){
+    var form = document.getElementById('contactForm');
+    if (!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var ok = document.getElementById('confirmMsg');
+      var err = document.getElementById('errorMsg');
+      ok.classList.remove('show'); err.classList.remove('show');
+      var btn = form.querySelector('button[type="submit"]');
+      var label = btn.textContent;
+      btn.textContent = 'Sending…'; btn.disabled = true;
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (data.success){ ok.classList.add('show'); form.reset(); }
+        else { err.classList.add('show'); }
+      })
+      .catch(function(){ err.classList.add('show'); })
+      .finally(function(){ btn.textContent = label; btn.disabled = false; });
+    });
+  })();
+
   function wireFilter(filterId, gridId, dataAttr){
     document.querySelectorAll('#' + filterId + ' button').forEach(function(btn){
       btn.addEventListener('click', function(){
