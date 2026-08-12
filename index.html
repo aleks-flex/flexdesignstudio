@@ -1447,6 +1447,33 @@
     });
   })();
 
+  (function(){
+    // Email links: copy address to clipboard on click, show quick "Copied!" feedback.
+    // The mailto: still fires for anyone who has a default mail app, so both paths work.
+    function flash(el){
+      var note = document.createElement('span');
+      note.textContent = 'Copied!';
+      note.style.cssText = 'margin-left:8px; font-family:\'IBM Plex Mono\',monospace; font-size:0.7rem; color:var(--blue-deep); letter-spacing:0.04em; vertical-align:middle;';
+      el.insertAdjacentElement('afterend', note);
+      setTimeout(function(){ note.remove(); }, 1600);
+    }
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+      a.addEventListener('click', function(){
+        var addr = a.getAttribute('href').replace(/^mailto:/,'').split('?')[0];
+        if (navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(addr).then(function(){ flash(a); }).catch(function(){});
+        } else {
+          // older-browser fallback
+          var t = document.createElement('textarea');
+          t.value = addr; t.style.position='fixed'; t.style.opacity='0';
+          document.body.appendChild(t); t.select();
+          try { document.execCommand('copy'); flash(a); } catch(e){}
+          document.body.removeChild(t);
+        }
+      });
+    });
+  })();
+
   function wireFilter(filterId, gridId, dataAttr){
     document.querySelectorAll('#' + filterId + ' button').forEach(function(btn){
       btn.addEventListener('click', function(){
