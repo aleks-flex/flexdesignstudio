@@ -37,82 +37,11 @@
     "addressCountry": "US"
   },
   "areaServed": "United States",
-  "knowsAbout": ["Workplace Design", "Hospitality Design", "Cannabis Dispensary Design", "Cannabis Cultivation and Manufacturing Facility Design", "Retail Design", "Residential Design", "Commercial Real Estate Tenant Improvement", "Building Information Modeling"],
+  "knowsAbout": ["Shopping Center Design", "Corporate Office Design", "Workplace Strategy", "Workplace Design", "Hospitality Design", "Cannabis Dispensary Design", "Cannabis Cultivation and Manufacturing Facility Design", "Retail Design", "Residential Design", "Commercial Real Estate Tenant Improvement", "Building Information Modeling"],
   "sameAs": [
     "https://www.linkedin.com/company/flex-design-studio",
     "https://www.instagram.com/flexdesignstudio_nola/",
     "https://www.facebook.com/p/FLEX-Design-Studio-61557775048913/"
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      "headline": "Dispensary design checklist: what cannabis operators need before permitting",
-      "about": "Cannabis Dispensary Design",
-      "keywords": "cannabis dispensary design, dispensary permitting, dispensary security layout",
-      "author": {"@type": "Organization", "name": "Flex Design Studio"},
-      "publisher": {"@type": "Organization", "name": "Flex Design Studio"}
-    },
-    {
-      "@type": "Article",
-      "headline": "What commercial real estate developers should ask before hiring a design firm",
-      "about": "Commercial Real Estate Tenant Improvement",
-      "keywords": "commercial real estate tenant improvement, workplace design, retail design, hospitality design",
-      "author": {"@type": "Organization", "name": "Flex Design Studio"},
-      "publisher": {"@type": "Organization", "name": "Flex Design Studio"}
-    },
-    {
-      "@type": "Article",
-      "headline": "Retrofitting an office for hybrid work: a building manager's guide",
-      "about": "Office Design",
-      "keywords": "office design, workplace design, hybrid office retrofit",
-      "author": {"@type": "Organization", "name": "Flex Design Studio"},
-      "publisher": {"@type": "Organization", "name": "Flex Design Studio"}
-    },
-    {
-      "@type": "Article",
-      "headline": "Designing a bar or restaurant that survives its first year",
-      "about": "Bar and Restaurant Design",
-      "keywords": "bar and restaurant design, hospitality design, restaurant layout design",
-      "author": {"@type": "Organization", "name": "Flex Design Studio"},
-      "publisher": {"@type": "Organization", "name": "Flex Design Studio"}
-    },
-    {
-      "@type": "Article",
-      "headline": "Retail storefront design that converts foot traffic into sales",
-      "about": "Retail Design",
-      "keywords": "retail design, storefront design, retail conversion layout",
-      "author": {"@type": "Organization", "name": "Flex Design Studio"},
-      "publisher": {"@type": "Organization", "name": "Flex Design Studio"}
-    },
-    {
-      "@type": "Article",
-      "headline": "What makes workplace design actually work in New Orleans",
-      "about": "Office Design",
-      "keywords": "office design New Orleans, workplace design New Orleans, BIM office design",
-      "author": {"@type": "Organization", "name": "Flex Design Studio"},
-      "publisher": {"@type": "Organization", "name": "Flex Design Studio"}
-    },
-    {
-      "@type": "Article",
-      "headline": "Cannabis dispensary design: what compliance actually requires",
-      "about": "Cannabis Dispensary Design",
-      "keywords": "cannabis dispensary design, dispensary compliance, dispensary security design",
-      "author": {"@type": "Organization", "name": "Flex Design Studio"},
-      "publisher": {"@type": "Organization", "name": "Flex Design Studio"}
-    },
-    {
-      "@type": "Article",
-      "headline": "Hospitality design trends shaping New Orleans bars and restaurants",
-      "about": "Bar and Restaurant Design",
-      "keywords": "hospitality design New Orleans, bar and restaurant design, restaurant design trends",
-      "author": {"@type": "Organization", "name": "Flex Design Studio"},
-      "publisher": {"@type": "Organization", "name": "Flex Design Studio"}
-    }
   ]
 }
 </script>
@@ -360,34 +289,12 @@
   .contact-info-card .row .v{font-size:0.92rem; text-align:right;}
   .confirm-msg{display:none; margin-top:16px; padding:13px 16px; border:1px solid var(--blue); background:rgba(217,67,46,0.08); color:var(--blue-deep); font-size:0.9rem;}
   .confirm-msg.show{display:block;}
-  .contact-email-cta{display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:8px 0;}
-  .contact-email-cta .contact-email-link{font-size:clamp(1.35rem,3vw,1.9rem); font-weight:600; color:var(--ink); text-decoration:none; margin:12px 0 18px; border-bottom:2px solid var(--blue); padding-bottom:3px; word-break:break-all;}
-  .contact-email-cta .contact-email-link:hover{color:var(--blue-deep);}
-  .contact-email-cta p{color:var(--ink-soft); font-size:0.98rem; line-height:1.6; max-width:44ch; margin-bottom:24px;}
 
-  /* Juicer.io feed overrides — class names match Juicer's public markup */
+  /* Starter overrides for a Juicer.io feed once embedded — refine after the
+     real widget is in place, class names below match Juicer's public markup */
   .juicer-feed{background:transparent !important; padding:0 !important;}
   .juicer-feed .referral{display:none !important;}
   .juicer-feed .j-poster{border:1px solid var(--line) !important; border-radius:0 !important; box-shadow:none !important;}
-  /* feed is capped at 8 posts / 1 page, so the paginator has nothing to load */
-  .juicer-feed .j-paginate,
-  .juicer-feed .juicer-button{display:none !important;}
-  /* Lock the feed to 2 rows regardless of how many columns Juicer renders.
-     Juicer lays posts out as .feed-item children; we hide any past 2 rows. */
-  .juicer-feed li.feed-item{display:none !important;}          /* hide all first */
-  .juicer-feed li.feed-item:nth-child(-n+8){display:block !important;}   /* 4 cols -> 8 = 2 rows */
-  @media (max-width: 1000px){
-    .juicer-feed li.feed-item:nth-child(-n+8){display:none !important;}
-    .juicer-feed li.feed-item:nth-child(-n+6){display:block !important;} /* 3 cols -> 6 */
-  }
-  @media (max-width: 720px){
-    .juicer-feed li.feed-item:nth-child(-n+6){display:none !important;}
-    .juicer-feed li.feed-item:nth-child(-n+4){display:block !important;} /* 2 cols -> 4 */
-  }
-  @media (max-width: 480px){
-    .juicer-feed li.feed-item:nth-child(-n+4){display:none !important;}
-    .juicer-feed li.feed-item:nth-child(-n+2){display:block !important;} /* 1 col -> 2 */
-  }
 
   /* ---------- PROJECT MODAL ---------- */
   #workGrid .tb-card{cursor:pointer;}
@@ -504,6 +411,7 @@
       <button class="navlink" data-page="work">Work</button>
       <button class="navlink" data-page="news">News</button>
       <button class="navlink" data-page="contact">Contact</button>
+      <button class="nav-cta" onclick="goTo('contact')">Start a project</button>
     </nav>
   </div>
 </header>
@@ -524,9 +432,20 @@
       </div>
       <div class="hero-diagram" id="heroSlideshow">
         <img class="slide active" src="images/wine-bar-01.jpg" alt="Elevated Wine Bar in the CBD — bar and mirrored wine wall">
+        <img class="slide" src="images/wine-bar-03.jpg" alt="Elevated Wine Bar in the CBD — lounge seating and sculptural ceiling">
+        <img class="slide" src="images/wine-bar-05.jpg" alt="Elevated Wine Bar in the CBD — bar seating along the wine wall">
+        <img class="slide" src="images/wine-bar-06.jpg" alt="Elevated Wine Bar in the CBD — full bar and lounge">
+        <img class="slide" src="images/wine-bar-08.jpg" alt="Elevated Wine Bar in the CBD — private dining room">
+        <img class="slide" src="images/wine-bar-09.jpg" alt="Elevated Wine Bar in the CBD — private dining, glass partition">
+        <img class="slide" src="images/wine-bar-11.jpg" alt="Elevated Wine Bar in the CBD — entry corridor">
+        <img class="slide" src="images/wine-bar-13.jpg" alt="Elevated Wine Bar in the CBD — lounge with sculptural ceiling medallion">
         <img class="slide" src="images/apres-01.jpg" alt="Apr&egrave;s nightclub — elevated marble stage and glass block wall">
+        <img class="slide" src="images/apres-06.jpg" alt="Apr&egrave;s nightclub — arched perforated metal corridor">
+        <img class="slide" src="images/apres-08.jpg" alt="Apr&egrave;s nightclub — lounge stage with neon edge lighting">
         <img class="slide" src="images/roof-02.jpg" alt="Chicory rooftop lounge — sail-shade canopy and lounge seating">
-        <img class="slide" src="images/terrabis-01.jpg" alt="Terrabis dispensary storefront in Mundelein, IL">
+        <img class="slide" src="images/roof-04.jpg" alt="Chicory rooftop lounge — bar with backlit shelving">
+        <img class="slide" src="images/terrabis-16.jpg" alt="Terrabis dispensary storefront in Mundelein, IL">
+        <img class="slide" src="images/terrabis-01.jpg" alt="Terrabis dispensary — retail floor with topographic mural">
       </div>
     </div>
 
@@ -541,7 +460,7 @@
     <section>
       <div class="sec-head">
         <span class="eyebrow">Sectors</span>
-        <h2>Workplace, hospitality, retail, cannabis, and multi-family design.</h2>
+        <h2>Workplace, hospitality, retail, cannabis, and residential design.</h2>
         <p>Every sector we work in comes with its own codes, its own users, and its own definition of a good day. We design for the one you're actually running.</p>
       </div>
       <div class="tb-grid" id="sectorsGrid">
@@ -566,8 +485,8 @@
           <div class="tb-meta"><span>Sector 05</span><span>Grow / Mfg</span></div>
         </div>
         <div class="tb-card">
-          <div class="tb-body"><h3>Multi-family</h3><p>Ground-up and renovated multi-family developments &mdash; unit layouts, amenity spaces, and common areas designed with the same rigor as our commercial work.</p></div>
-          <div class="tb-meta"><span>Sector 06</span><span>Multi-family</span></div>
+          <div class="tb-body"><h3>Residential</h3><p>Homes designed with the same rigor as our commercial work — for clients who want their space to feel considered, not decorated.</p></div>
+          <div class="tb-meta"><span>Sector 06</span><span>Residential</span></div>
         </div>
       </div>
     </section>
@@ -612,11 +531,10 @@
           <p>We aim to understand a client's history, culture, and goals before we draw a single wall — then apply that knowledge to a space built for their brand, not a template. We're comfortable in the messier parts of construction: tight deadlines, shifting scopes, and the coordination it takes to get a project from concept to occupancy.</p>
         </div>
         <div>
-          <img src="images/aleks-furman.jpg" alt="Aleks Furman, Founder and Principal of Flex Design Studio" style="width:100%; height:auto; display:block; border:1px solid var(--line);">
-          <div class="about-fact" style="border-bottom:1px solid var(--line);">
-            <div class="k">Founder &amp; Principal</div>
-            <div class="v">Aleks Furman</div>
-          </div>
+          <div class="about-fact"><div class="k">Founded</div><div class="v">2022, Chicago — now New Orleans</div></div>
+          <div class="about-fact"><div class="k">Led by</div><div class="v">Aleks Furman, Founder &amp; Principal</div></div>
+          <div class="about-fact"><div class="k">Reach</div><div class="v">National, HQ in New Orleans, LA</div></div>
+          <div class="about-fact"><div class="k">Focus</div><div class="v">Workplace, hospitality, retail, cannabis, residential</div></div>
         </div>
       </div>
     </section>
@@ -709,7 +627,7 @@
     <section>
       <span class="eyebrow">Selected work</span>
       <h1 style="font-size:clamp(1.9rem,3.4vw,2.4rem); margin:14px 0 16px;">Projects across six sectors.</h1>
-      <p style="color:var(--ink-soft); font-size:1rem; max-width:60ch; margin-bottom:30px; line-height:1.6;">A cross-section of workplace, hospitality, retail, cannabis, and multi-family projects, filtered by sector below.</p>
+      <p style="color:var(--ink-soft); font-size:1rem; max-width:60ch; margin-bottom:30px; line-height:1.6;">A cross-section of workplace, hospitality, retail, cannabis, and residential projects, filtered by sector below.</p>
 
       <div class="filters" id="filters">
         <button class="active" data-filter="all">All</button>
@@ -718,254 +636,240 @@
         <button data-filter="Retail">Retail</button>
         <button data-filter="Dispensary">Dispensary</button>
         <button data-filter="Grow">Grow &amp; mfg</button>
-        <button data-filter="Residential">Multi-family</button>
+        <button data-filter="Residential">Residential</button>
       </div>
 
       <div class="tb-grid" id="workGrid">
-        <div class="tb-card" data-sector="Dispensary" data-images="hay-01.jpg,hay-02.jpg,hay-03.jpg,hay-04.jpg">
-          <div class="tb-photo">
-            <img src="images/hay-01.jpg" data-cover="hay" alt="HAY Cannabis &mdash; Chicago dispensary exterior at dusk with illuminated hexagon logo and wood facade" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>HAY Cannabis Dispensary &mdash; Chicago</h3><p>An Illinois adult-use cannabis dispensary with a hexagon brand motif, exposed brick, living moss walls, and herringbone floors.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>Chicago, IL</span></div>
-        </div>
-        <div class="tb-card" data-sector="Hospitality" data-images="wine-bar-01.jpg,wine-bar-02.jpg,wine-bar-03.jpg,wine-bar-04.jpg,wine-bar-05.jpg,wine-bar-06.jpg,wine-bar-08.jpg,wine-bar-09.jpg,wine-bar-10.jpg,wine-bar-12.jpg,wine-bar-13.jpg">
-          <div class="tb-photo">
-            <img src="images/wine-bar-01.jpg" data-cover="wine-bar" alt="Elevated Wine Bar in the CBD" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Elevated Wine Bar in the CBD</h3><p>A wine bar and lounge built around a mirrored wine wall, sculptural LED ceiling coves, and a curved marble bar anchoring the room.</p></div>
-          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
-        </div>
-        <div class="tb-card" data-sector="Workplace" data-images="flex-hq-01.jpg,flex-hq-02.jpg,flex-hq-03.jpg,flex-hq-04.jpg,flex-hq-05.jpg,flex-hq-06.jpg,flex-hq-07.jpg,flex-hq-08.jpg">
-          <div class="tb-photo">
-            <img src="images/flex-hq-01.jpg" data-cover="flex-hq" alt="Flex Design Studio New Orleans HQ — lounge with blue velvet sofa, acoustic phone booth, and abstract art" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Flex &mdash; New Orleans HQ</h3><p>Flex Design Studio's own New Orleans headquarters.</p></div>
-          <div class="tb-meta"><span>Workplace</span><span>New Orleans, LA</span></div>
-        </div>
-        <div class="tb-card" data-sector="Dispensary" data-images="grasshopper-01.jpg,grasshopper-02.jpg,grasshopper-03.jpg">
-          <div class="tb-photo">
-            <img src="images/grasshopper-02.jpg" data-cover="grasshopper" alt="Grasshopper Club dispensary — curved retail counter with living wall" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Grasshopper Club Dispensary &mdash; South Loop</h3><p>A cannabis dispensary with a curved walnut bud bar running the length of a high-traffic Chicago storefront &mdash; backlit brick and apothecary shelving behind it, glass block partitions, terrazzo underfoot, and a living wall over the merch display.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>Chicago, IL</span></div>
-        </div>
-        <div class="tb-card" data-sector="Hospitality" data-images="apres-01.jpg,apres-03.jpg,apres-05.jpg,apres-06.jpg,apres-07.jpg,apres-08.jpg,apres-09.jpg,apres-10.jpg,apres-11.jpg,apres-12.jpg">
-          <div class="tb-photo">
-            <img src="images/apres-01.jpg" data-cover="apres" alt="Apr&egrave;s nightclub — elevated marble stage and glass block wall" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Apr&egrave;s &mdash; Warehouse District Nightclub</h3><p>A futuristic, industrial nightclub built from perforated metal, glass block, and marble, with a raised stage platform under a wall of warm neon light.</p></div>
-          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
-        </div>
-        <div class="tb-card" data-sector="Retail" data-images="ggi-01.jpg,ggi-02.jpg,ggi-03.jpg,ggi-04.jpg,ggi-05.jpg,ggi-06.jpg,ggi-07.jpg">
-          <div class="tb-photo">
-            <img src="images/ggi-01.jpg" data-cover="ggi" alt="GGI trade show booth &mdash; printed glass partitions and sample display bars" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>GGI Booth</h3><p>A showroom and trade show booth for a glass fabricator, using the product itself as architecture &mdash; printed and laminated glass partitions framing sample bars for specialty, architectural, and decorative lines.</p></div>
-          <div class="tb-meta"><span>Retail</span><span>Multiple Locations</span></div>
-        </div>
-        <div class="tb-card" data-sector="Dispensary" data-images="terrabis-01.jpg,terrabis-02.jpg,terrabis-03.jpg,terrabis-04.jpg,terrabis-05.jpg,terrabis-06.jpg,terrabis-07.jpg,terrabis-08.jpg,terrabis-09.jpg,terrabis-10.jpg,terrabis-11.jpg,terrabis-12.jpg,terrabis-13.jpg">
-          <div class="tb-photo">
-            <img src="images/terrabis-01.jpg" data-cover="terrabis" alt="Terrabis dispensary storefront in Mundelein, IL" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Terrabis Dispensary &mdash; Mundelein, IL</h3><p>A ground-up cannabis dispensary conversion with a branded topographic mural, walnut display cases, and secure retail flow from entry to checkout.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>Mundelein, IL</span></div>
-        </div>
-        <div class="tb-card" data-sector="Hospitality" data-images="roof-01.jpg,roof-02.jpg,roof-03.jpg,roof-05.jpg">
-          <div class="tb-photo">
-            <img src="images/roof-02.jpg" data-cover="roof" alt="Chicory rooftop lounge — sail-shade canopy and lounge seating" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Chicory Rooftop Lounge</h3><p>A rooftop addition for the beloved Chicory event venue, with a woven sail-shade canopy, bamboo privacy screening, and a corrugated-metal bar overlooking the skyline.</p></div>
-          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
-        </div>
-        <div class="tb-card" data-sector="Workplace" data-images="raven-05.jpg,raven-11.jpg,raven-01.jpg,raven-02.jpg,raven-10.jpg,raven-03.jpg,raven-04.jpg,raven-07.jpg,raven-08.jpg,raven-06.jpg,raven-09.jpg">
-          <div class="tb-photo">
-            <img src="images/raven-05.jpg" data-cover="raven" alt="Raven New Orleans HQ — communal worktable and glass-walled meeting room with map mural" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Raven &mdash; New Orleans HQ</h3><p>Headquarters build-out for Raven's New Orleans office.</p></div>
-          <div class="tb-meta"><span>Workplace</span><span>New Orleans, LA</span></div>
-        </div>
-        <div class="tb-card" data-sector="Dispensary" data-images="green-cup-01.jpg,green-cup-02.jpg,green-cup-03.jpg,green-cup-04.jpg,green-cup-06.jpg,green-cup-07.jpg">
-          <div class="tb-photo">
-            <img src="images/green-cup-02.jpg" data-cover="green-cup" alt="Green Cup dispensary — retail floor with green tile and illuminated display wall" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Green Cup Dispensary</h3><p>A glazed green-tile display wall and oak millwork anchor this Bronx cannabis dispensary, with terrazzo flooring and a glowing marquee sign.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>Bronx, NY</span></div>
-        </div>
-        <div class="tb-card" data-sector="Hospitality" data-images="bywater-music-01.jpg,bywater-music-02.jpg,bywater-music-03.jpg,bywater-music-04.jpg,bywater-music-05.jpg,bywater-music-06.jpg,bywater-music-07.jpg,bywater-music-08.jpg">
-          <div class="tb-photo">
-            <img src="images/bywater-music-01.jpg" data-cover="bywater-music" alt="Bywater Music Venue — double-height red-lit hall with stage, crowd, and wrap-around mezzanine" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Bywater Music Venue</h3><p>A live music venue build-out in the Bywater.</p></div>
-          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
-        </div>
-        <div class="tb-card" data-sector="Dispensary" data-images="cloudhaven-03.jpg,cloudhaven-04.jpg,cloudhaven-05.jpg,cloudhaven-06.jpg,cloudhaven-07.jpg">
-          <div class="tb-photo">
-            <img src="images/cloudhaven-06.jpg" data-cover="cloudhaven" alt="Cloudhaven Dispensary — reception hallway with ombr&eacute; blue ceiling" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Cloudhaven Dispensary</h3><p>A cannabis dispensary with a branded reception hallway &mdash; a graduated blue ceiling and wood slat beams, designed around full ADA-accessible circulation.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>South Beloit, IL</span></div>
-        </div>
-        <div class="tb-card" data-sector="Hospitality" data-images="creole-01.jpg,creole-02.jpg,creole-03.jpg,creole-04.jpg,creole-05.jpg,creole-06.jpg,creole-07.jpg,creole-08.jpg,creole-09.jpg,creole-10.jpg,creole-11.jpg,creole-12.jpg,creole-13.jpg">
-          <div class="tb-photo">
-            <img src="images/creole-01.jpg" data-cover="creole" alt="Creole Restaurant — circular two-tier suspended wine display over a central bar" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Creole Restaurant</h3><p>A restaurant build-out for a confidential client.</p></div>
-          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
-        </div>
-        <div class="tb-card" data-sector="Retail" data-images="ki-01.jpg,ki-02.jpg,ki-03.jpg,ki-04.jpg,ki-05.jpg,ki-06.jpg,ki-07.jpg,ki-08.jpg,ki-09.jpg">
-          <div class="tb-photo">
-            <img src="images/ki-01.jpg" data-cover="ki" alt="KI Showroom — bright lounge corridor with colorful lounge chairs and red wall sculpture" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>KI Showroom</h3><p>A furniture showroom build-out for KI.</p></div>
-          <div class="tb-meta"><span>Retail</span><span>Chicago, IL</span></div>
-        </div>
-        <div class="tb-card" data-sector="Workplace" data-images="eurofins-01.jpg,eurofins-02.jpg,eurofins-03.jpg,eurofins-04.jpg,eurofins-05.jpg,eurofins-06.jpg">
-          <div class="tb-photo">
-            <img src="images/eurofins-01.jpg" data-cover="eurofins" alt="Eurofins — elevator lobby with 'Testing for Life' branded wood wall and orange values wall beyond" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Workplace">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="150" y1="10" x2="150" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="75" x2="150" y2="75" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
           <div class="tb-body"><h3>Eurofins &mdash; Central Analytical Labs</h3><p>Elevator lobbies and conference rooms for a central analytical lab.</p></div>
           <div class="tb-meta"><span>Workplace</span><span>New Orleans, LA</span></div>
         </div>
-        <div class="tb-card" data-sector="Dispensary" data-images="ags-01.jpg,ags-02.jpg,ags-03.jpg,ags-04.jpg,ags-05.jpg,ags-07.jpg">
-          <div class="tb-photo">
-            <img src="images/ags-05.jpg" data-cover="ags" alt="AGS Dispensary concept — retail floor with terrazzo display islands" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Workplace">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="100" height="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="170" y="80" width="100" height="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>AGS Dispensary Concept</h3><p>A design concept pairing brass-framed terrazzo display islands with oak millwork and black corrugated metal, for a cannabis dispensary with a boutique-retail feel.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>Saddle Brook, NJ</span></div>
+          <div class="tb-body"><h3>Raven &mdash; New Orleans HQ</h3><p>Headquarters build-out for Raven's New Orleans office.</p></div>
+          <div class="tb-meta"><span>Workplace</span><span>New Orleans, LA</span></div>
         </div>
-        <div class="tb-card" data-sector="Hospitality" data-images="bywater-bar-01.jpg,bywater-bar-02.jpg,bywater-bar-03.jpg,bywater-bar-04.jpg,bywater-bar-05.jpg">
+        <div class="tb-card" data-sector="Workplace">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="55" x2="290" y2="55" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="95" x2="290" y2="95" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Flex &mdash; New Orleans HQ</h3><p>Flex Design Studio's own New Orleans headquarters.</p></div>
+          <div class="tb-meta"><span>Workplace</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Workplace">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><circle cx="230" cy="75" r="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Amata Express</h3><p>Workplace build-out for Amata Express.</p></div>
+          <div class="tb-meta"><span>Workplace</span><span>Location TBD</span></div>
+        </div>
+        <div class="tb-card" data-sector="Workplace">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="40" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="200" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Center Staging &mdash; Office Expansion</h3><p>Office expansion for Center Staging.</p></div>
+          <div class="tb-meta"><span>Workplace</span><span>Location TBD</span></div>
+        </div>
+        <div class="tb-card" data-sector="Hospitality" data-images="wine-bar-01.jpg,wine-bar-02.jpg,wine-bar-03.jpg,wine-bar-04.jpg,wine-bar-05.jpg,wine-bar-06.jpg,wine-bar-07.jpg,wine-bar-08.jpg,wine-bar-09.jpg,wine-bar-10.jpg,wine-bar-11.jpg,wine-bar-12.jpg,wine-bar-13.jpg,wine-bar-14.jpg">
           <div class="tb-photo">
-            <img src="images/bywater-bar-01.jpg" data-cover="bywater-bar" alt="Bywater Bar — dusk exterior with glowing BAR sign and red water tower" style="width:100%; height:100%; object-fit:cover;">
+            <img src="images/wine-bar-01.jpg" alt="Elevated Wine Bar in the CBD" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="tb-body"><h3>Elevated Wine Bar in the CBD</h3><p>A wine bar and lounge built around a mirrored wine wall, sculptural LED ceiling coves, and a curved marble bar anchoring the room.</p></div>
+          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Hospitality" data-images="apres-01.jpg,apres-02.jpg,apres-03.jpg,apres-04.jpg,apres-05.jpg,apres-06.jpg,apres-07.jpg,apres-08.jpg,apres-09.jpg,apres-10.jpg,apres-11.jpg,apres-12.jpg,apres-13.jpg">
+          <div class="tb-photo">
+            <img src="images/apres-01.jpg" alt="Apr&egrave;s nightclub — elevated marble stage and glass block wall" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="tb-body"><h3>Apr&egrave;s &mdash; Warehouse District Nightclub</h3><p>A futuristic, industrial nightclub built from perforated metal, glass block, and marble, with a raised stage platform under a wall of warm neon light.</p></div>
+          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Hospitality" data-images="roof-01.jpg,roof-02.jpg,roof-03.jpg,roof-04.jpg,roof-05.jpg,roof-06.jpg">
+          <div class="tb-photo">
+            <img src="images/roof-02.jpg" alt="Chicory rooftop lounge — sail-shade canopy and lounge seating" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="tb-body"><h3>Chicory Rooftop Lounge</h3><p>A rooftop addition for the beloved Chicory event venue, with a woven sail-shade canopy, bamboo privacy screening, and a corrugated-metal bar overlooking the skyline.</p></div>
+          <div class="tb-meta"><span>Hospitality</span><span>Rooftop expansion</span></div>
+        </div>
+        <div class="tb-card" data-sector="Hospitality">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><circle cx="230" cy="75" r="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
           <div class="tb-body"><h3>Bywater Bar</h3><p>A neighborhood bar build-out in the Bywater.</p></div>
           <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
         </div>
-        <div class="tb-card" data-sector="Dispensary" data-images="terrabis-dixon-02.jpg,terrabis-dixon-03.jpg,terrabis-dixon-04.jpg,terrabis-dixon-05.jpg,terrabis-dixon-06.jpg,terrabis-dixon-07.jpg,terrabis-dixon-08.jpg,terrabis-dixon-09.jpg,terrabis-dixon-10.jpg">
-          <div class="tb-photo">
-            <img src="images/terrabis-dixon-03.jpg" data-cover="terrabis-dixon" alt="Terrabis dispensary interior in Dixon, IL" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Hospitality">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><circle cx="230" cy="75" r="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Terrabis Dispensary &mdash; Dixon, IL</h3><p>A second Terrabis cannabis dispensary, carrying the brand's topographic identity and walnut millwork into a new market with dedicated kiosk and budtender counters.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>Dixon, IL</span></div>
-        </div>
-        <div class="tb-card" data-sector="Workplace" data-images="amata-01.jpg,amata-02.jpg,amata-03.jpg,amata-04.jpg,amata-05.jpg">
-          <div class="tb-photo">
-            <img src="images/amata-01.jpg" data-cover="amata" alt="Amata Express — warm workplace lounge with patterned ceiling, banquette seating, and communal bar" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Amata Express</h3><p>Workplace build-out for Amata Express.</p></div>
-          <div class="tb-meta"><span>Workplace</span><span>Greater Chicagoland Area, IL</span></div>
-        </div>
-        <div class="tb-card" data-sector="Retail" data-images="resistance-milwaukee-01.jpg,resistance-milwaukee-02.jpg">
-          <div class="tb-photo">
-            <img src="images/resistance-milwaukee-01.jpg" data-cover="resistance-milwaukee" alt="Resistance Lagree Milwaukee Ave &mdash; studio floor with Megaformer rows beneath exposed steel joists and ductwork" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Resistance Lagree &mdash; Milwaukee Ave</h3><p>A boutique Lagree studio set beneath exposed steel joists and raw ductwork, with a frosted glazing band wrapping the machine floor and an oak locker corridor drawing members in from the entry.</p></div>
-          <div class="tb-meta"><span>Retail</span><span>Chicago, IL</span></div>
-        </div>
-        <div class="tb-card" data-sector="Dispensary" data-images="empire-01.jpg,empire-02.jpg,empire-03.jpg">
-          <div class="tb-photo">
-            <img src="images/empire-01.jpg" data-cover="empire" alt="Empire Cannabis Co. — dark-and-gold retail floor with branded feature wall and arched lit display niches" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Empire Cannabis Co. Dispensary</h3><p>A cannabis dispensary build-out in Astoria, Queens.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>Astoria, Queens, NY</span></div>
-        </div>
-        <div class="tb-card" data-sector="Hospitality" data-images="bywater-studio-01.jpg,bywater-studio-02.jpg,bywater-studio-03.jpg,bywater-studio-04.jpg,bywater-studio-05.jpg">
-          <div class="tb-photo">
-            <img src="images/bywater-studio-02.jpg" data-cover="bywater-studio" alt="Bywater Recording Studio &mdash; recording and practice space interior" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="tb-body"><h3>Bywater Recording Studio / Practice Space</h3><p>A high-end recording studio and practice stage in the Bywater, conceived by New Orleans native and six-time Grammy winner PJ Morton &mdash; a professional-grade room built for the country's biggest acts to write, rehearse, and record.</p></div>
+          <div class="tb-body"><h3>Bywater Music Venue</h3><p>A live music venue build-out in the Bywater.</p></div>
           <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
         </div>
-        <div class="tb-card" data-sector="Dispensary" data-images="terrabis-woodstock-02.jpg,terrabis-woodstock-03.jpg,terrabis-woodstock-04.jpg">
-          <div class="tb-photo">
-            <img src="images/terrabis-woodstock-02.jpg" data-cover="terrabis-woodstock" alt="Terrabis dispensary storefront in Woodstock, IL" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Hospitality">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><circle cx="230" cy="75" r="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Terrabis Dispensary &mdash; Woodstock, IL</h3><p>A third Terrabis cannabis dispensary, extending the brand's blue-and-white identity to a new storefront with self-checkout kiosks and a full retail floor.</p></div>
+          <div class="tb-body"><h3>Bywater Recording Studio / Practice Space</h3><p>A recording studio and practice space build-out in the Bywater.</p></div>
+          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Hospitality">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><circle cx="230" cy="75" r="40" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Creole Restaurant</h3><p>A restaurant build-out for a confidential client.</p></div>
+          <div class="tb-meta"><span>Hospitality</span><span>New Orleans, LA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Dispensary" data-images="terrabis-01.jpg,terrabis-02.jpg,terrabis-03.jpg,terrabis-04.jpg,terrabis-05.jpg,terrabis-06.jpg,terrabis-07.jpg,terrabis-08.jpg,terrabis-09.jpg,terrabis-10.jpg,terrabis-11.jpg,terrabis-12.jpg,terrabis-13.jpg,terrabis-14.jpg,terrabis-15.jpg,terrabis-16.jpg">
+          <div class="tb-photo">
+            <img src="images/terrabis-16.jpg" alt="Terrabis dispensary storefront in Mundelein, IL" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="tb-body"><h3>Terrabis &mdash; Mundelein, IL</h3><p>A ground-up cannabis dispensary conversion with a branded topographic mural, walnut display cases, and secure retail flow from entry to checkout.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>Mundelein, IL</span></div>
+        </div>
+        <div class="tb-card" data-sector="Dispensary" data-images="terrabis-dixon-01.jpg,terrabis-dixon-02.jpg,terrabis-dixon-03.jpg,terrabis-dixon-04.jpg,terrabis-dixon-05.jpg,terrabis-dixon-06.jpg,terrabis-dixon-07.jpg,terrabis-dixon-08.jpg,terrabis-dixon-09.jpg,terrabis-dixon-10.jpg">
+          <div class="tb-photo">
+            <img src="images/terrabis-dixon-09.jpg" alt="Terrabis dispensary checkout counter in Dixon, IL" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="tb-body"><h3>Terrabis &mdash; Dixon, IL</h3><p>A second Terrabis location carrying the brand's topographic identity and walnut millwork into a new market, with dedicated kiosk and budtender counters.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>Dixon, IL</span></div>
+        </div>
+        <div class="tb-card" data-sector="Dispensary" data-images="terrabis-woodstock-01.jpg,terrabis-woodstock-02.jpg,terrabis-woodstock-03.jpg,terrabis-woodstock-04.jpg">
+          <div class="tb-photo">
+            <img src="images/terrabis-woodstock-01.jpg" alt="Terrabis dispensary storefront in Woodstock, IL" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="tb-body"><h3>Terrabis &mdash; Woodstock, IL</h3><p>A third Terrabis build-out, extending the brand's blue-and-white identity to a new storefront with self-checkout kiosks and a full retail floor.</p></div>
           <div class="tb-meta"><span>Dispensary</span><span>Woodstock, IL</span></div>
         </div>
-        <div class="tb-card" data-sector="Workplace" data-images="centerstaging-01.jpg,centerstaging-02.jpg,centerstaging-03.jpg,centerstaging-04.jpg,centerstaging-05.jpg">
+        <div class="tb-card" data-sector="Dispensary" data-images="green-cup-01.jpg,green-cup-02.jpg,green-cup-03.jpg,green-cup-04.jpg,green-cup-05.jpg,green-cup-06.jpg,green-cup-07.jpg">
           <div class="tb-photo">
-            <img src="images/centerstaging-01.jpg" data-cover="centerstaging" alt="Center Staging &mdash; conference room with striped acoustic ceiling, backlit cork wall, and glass partition" style="width:100%; height:100%; object-fit:cover;">
+            <img src="images/green-cup-02.jpg" alt="Green Cup dispensary — retail floor with green tile and illuminated display wall" style="width:100%; height:100%; object-fit:cover;">
           </div>
-          <div class="tb-body"><h3>Center Staging &mdash; Office Expansion</h3><p>An office expansion built around the brand's palette &mdash; a striped acoustic ceiling and backlit cork feature wall in the conference room, a rust wave-panel wall and open steel stair linking the caf&eacute; to lounge and work areas above.</p></div>
-          <div class="tb-meta"><span>Workplace</span><span>New Orleans, LA</span></div>
+          <div class="tb-body"><h3>Green Cup</h3><p>A glazed green-tile display wall and oak millwork anchor this Bronx dispensary, with terrazzo flooring and a glowing marquee sign.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>Bronx, NY</span></div>
         </div>
-        <div class="tb-card" data-sector="Dispensary" data-images="nile-01.jpg,nile-02.jpg,nile-03.jpg">
+        <div class="tb-card" data-sector="Dispensary" data-images="cloudhaven-01.jpg,cloudhaven-02.jpg,cloudhaven-03.jpg,cloudhaven-04.jpg,cloudhaven-05.jpg,cloudhaven-06.jpg,cloudhaven-07.jpg">
           <div class="tb-photo">
-            <img src="images/nile-01.jpg" data-cover="nile" alt="Nile Dispensary &mdash; reception with curved stone counter and blue lotus mural on white brick" style="width:100%; height:100%; object-fit:cover;">
+            <img src="images/cloudhaven-06.jpg" alt="Cloudhaven Dispensary — reception hallway with ombr&eacute; blue ceiling" style="width:100%; height:100%; object-fit:cover;">
           </div>
-          <div class="tb-body"><h3>Nile Dispensary &mdash; Bergenline Ave</h3><p>An adult-use cannabis dispensary on Hudson County's densest retail corridor, built around a curved stone welcome desk, a lotus mural on white brick, and light birch display millwork under a raw concrete ceiling.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>West New York, NJ</span></div>
+          <div class="tb-body"><h3>Cloudhaven Dispensary</h3><p>A branded reception hallway with a graduated blue ceiling and wood slat beams, designed around full ADA-accessible circulation.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>South Beloit, IL</span></div>
         </div>
-        <div class="tb-card" data-sector="Retail" data-images="resistance-addison-01.jpg">
+        <div class="tb-card" data-sector="Dispensary" data-images="grasshopper-01.jpg,grasshopper-02.jpg,grasshopper-03.jpg,grasshopper-04.jpg">
           <div class="tb-photo">
-            <img src="images/resistance-addison-01.jpg" data-cover="resistance-addison" alt="Resistance Lagree Addison Ave &mdash; open studio floor with Megaformer rows, blacked-out ceiling, linear LED strips, and a full glazed wall" style="width:100%; height:100%; object-fit:cover;">
+            <img src="images/grasshopper-02.jpg" alt="Grasshopper Club dispensary — curved retail counter with living wall" style="width:100%; height:100%; object-fit:cover;">
           </div>
-          <div class="tb-body"><h3>Resistance Lagree &mdash; Addison Ave</h3><p>A second Resistance Lagree studio, opened up as a single blacked-out volume &mdash; exposed structure and continuous linear LED runs overhead, a full glazed wall bringing daylight across the Megaformer rows and polished concrete floor.</p></div>
-          <div class="tb-meta"><span>Retail</span><span>Chicago, IL</span></div>
+          <div class="tb-body"><h3>Grasshopper Club &mdash; South Loop</h3><p>A curved wood retail counter and reeded-glass partitions set against exposed brick, designed for a high-traffic Chicago storefront.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>Chicago, IL</span></div>
         </div>
-        <div class="tb-card" data-sector="Dispensary" data-images="leaflife-01.jpg,leaflife-02.jpg,leaflife-03.jpg,leaflife-04.jpg">
+        <div class="tb-card" data-sector="Dispensary" data-images="ags-01.jpg,ags-02.jpg,ags-03.jpg,ags-04.jpg,ags-05.jpg,ags-06.jpg,ags-07.jpg">
           <div class="tb-photo">
-            <img src="images/leaflife-01.jpg" data-cover="leaflife" alt="Leaf Life dispensary &mdash; retail floor with timber trellis, trailing greenery, and botanical tree mural" style="width:100%; height:100%; object-fit:cover;">
+            <img src="images/ags-05.jpg" alt="AGS Dispensary concept — retail floor with terrazzo display islands" style="width:100%; height:100%; object-fit:cover;">
           </div>
-          <div class="tb-body"><h3>Leaf Life Dispensary</h3><p>An adult-use cannabis dispensary built around a timber trellis threaded with trailing greenery &mdash; a backlit oak bud bar beneath it, round display plinths on the floor, and a hand-drawn botanical mural anchoring the entry.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>Aurora, IL</span></div>
+          <div class="tb-body"><h3>AGS Dispensary Concept</h3><p>A design concept pairing brass-framed terrazzo display islands with oak millwork and black corrugated metal, for a dispensary with a boutique-retail feel.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>Saddle Brook, NJ</span></div>
         </div>
-        <div class="tb-card" data-sector="Grow" data-images="battle-green-01.jpg">
-          <div class="tb-photo">
-            <img src="images/battle-green-01.jpg" data-cover="battle-green" alt="Battle Green — cannabis cultivation and manufacturing brand" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Dispensary">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="55" x2="290" y2="55" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="95" x2="290" y2="95" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Battle Green</h3><p>A cannabis cultivation and manufacturing facility.</p></div>
-          <div class="tb-meta"><span>Grow &amp; mfg</span><span>East Orange, NJ</span></div>
+          <div class="tb-body"><h3>Dominica</h3><p>A cannabis dispensary build-out.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>Location TBD</span></div>
         </div>
-        <div class="tb-card" data-sector="Grow" data-images="terrabis-kc-mfg-01.jpg">
-          <div class="tb-photo">
-            <img src="images/terrabis-kc-mfg-01.jpg" data-cover="terrabis-kc-mfg" alt="Terrabis &mdash; KC Manufacturing Facility" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Dispensary">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="55" x2="290" y2="55" stroke="var(--ink-soft)" stroke-width="1"/><line x1="10" y1="95" x2="290" y2="95" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Terrabis &mdash; Hazelwood, MO</h3><p>A fourth Terrabis location, carrying the brand's topographic identity into Missouri.</p></div>
+          <div class="tb-meta"><span>Dispensary</span><span>Hazelwood, MO</span></div>
+        </div>
+        <div class="tb-card" data-sector="Grow">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="60" y1="10" x2="60" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="110" y1="10" x2="110" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="160" y1="10" x2="160" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="210" y1="10" x2="210" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="260" y1="10" x2="260" y2="140" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
           <div class="tb-body"><h3>Terrabis &mdash; KC Manufacturing Facility</h3><p>Cultivation and manufacturing workflow design carrying the Terrabis brand into a production facility.</p></div>
           <div class="tb-meta"><span>Grow &amp; mfg</span><span>Kansas City, MO</span></div>
         </div>
-        <div class="tb-card" data-sector="Dispensary" data-images="terrabis-hazelwood-01.jpg">
-          <div class="tb-photo">
-            <img src="images/terrabis-hazelwood-01.jpg" data-cover="terrabis-hazelwood" alt="Terrabis &mdash; Hazelwood, MO dispensary" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Grow">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="60" y1="10" x2="60" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="110" y1="10" x2="110" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="160" y1="10" x2="160" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="210" y1="10" x2="210" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="260" y1="10" x2="260" y2="140" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>Terrabis Dispensary &mdash; Hazelwood, MO</h3><p>A fourth Terrabis cannabis dispensary, carrying the brand's topographic identity into Missouri.</p></div>
-          <div class="tb-meta"><span>Dispensary</span><span>Hazelwood, MO</span></div>
+          <div class="tb-body"><h3>Battle Green</h3><p>A cannabis cultivation and manufacturing facility.</p></div>
+          <div class="tb-meta"><span>Grow &amp; mfg</span><span>East Orange, NJ</span></div>
         </div>
-        <div class="tb-card" data-sector="Grow" data-images="ags-grow-01.jpg">
-          <div class="tb-photo">
-            <img src="images/ags-grow-01.jpg" data-cover="ags-grow" alt="AGS (A Golden State) — cannabis cultivation and manufacturing brand" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Grow">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><line x1="60" y1="10" x2="60" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="110" y1="10" x2="110" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="160" y1="10" x2="160" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="210" y1="10" x2="210" y2="140" stroke="var(--ink-soft)" stroke-width="1"/><line x1="260" y1="10" x2="260" y2="140" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
           <div class="tb-body"><h3>AGS</h3><p>A cannabis cultivation and manufacturing facility.</p></div>
           <div class="tb-meta"><span>Grow &amp; mfg</span><span>Burlington, NJ</span></div>
         </div>
-        <div class="tb-card" data-sector="Residential" data-images="foucher-01.jpg,foucher-02.jpg,foucher-03.jpg,foucher-04.jpg,foucher-05.jpg,foucher-06.jpg">
-          <div class="tb-photo">
-            <img src="images/foucher-01.jpg" data-cover="foucher" alt="830 Foucher &mdash; kitchen with mustard zellige backsplash, sage plaster walls, and terracotta hex floor" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Residential">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="70" height="50" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="120" y="30" width="70" height="90" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="210" y="60" width="60" height="60" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>830 Foucher</h3><p>A full renovation of a historic Queen Anne cottage in the Irish Channel &mdash; original millwork, wainscot and corner fireplaces preserved, then set against sage plaster, mustard zellige, terracotta hex floors, and a glass block shower.</p></div>
+          <div class="tb-body"><h3>830 Foucher</h3><p>A full-home renovation on Foucher Street.</p></div>
           <div class="tb-meta"><span>Residential</span><span>New Orleans, LA</span></div>
         </div>
-        <div class="tb-card" data-sector="Residential" data-images="prytania-01.jpg,prytania-02.jpg,prytania-03.jpg,prytania-04.jpg,prytania-05.jpg">
-          <div class="tb-photo">
-            <img src="images/prytania-01.jpg" data-cover="prytania" alt="2523 Prytania &mdash; great room with restored curved staircase and herringbone floors" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Residential">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="70" height="50" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="120" y="30" width="70" height="90" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="210" y="60" width="60" height="60" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>2523 Prytania</h3><p>A full-home renovation of the 1856 Lonsdale Mansion, once home to Anne Rice and later Nicolas Cage. Structural failure left the house gutted to its shell &mdash; the interior is being rebuilt around a restored grand staircase, leaded-glass entry, and herringbone floors.</p></div>
+          <div class="tb-body"><h3>2523 Prytania</h3><p>A full-home renovation on Prytania Street.</p></div>
           <div class="tb-meta"><span>Residential</span><span>New Orleans, LA</span></div>
         </div>
-        <div class="tb-card" data-sector="Residential" data-images="esplanade-01.jpg,esplanade-02.jpg,esplanade-03.jpg,esplanade-04.jpg,esplanade-05.jpg,esplanade-06.jpg,esplanade-07.jpg,esplanade-08.jpg">
-          <div class="tb-photo">
-            <img src="images/esplanade-01.jpg" data-cover="esplanade" alt="1265 Esplanade &mdash; restored double-gallery facade with cast-iron railings" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Residential">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="70" height="50" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="120" y="30" width="70" height="90" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="210" y="60" width="60" height="60" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>1265 Esplanade</h3><p>A full-home renovation of a double-gallery house on Esplanade Avenue &mdash; cast-iron railings and rusticated siding restored outside; inside, heart pine floors, plaster medallions and pocket doors kept alongside exposed brick chimneys, black-ceilinged baths, and hex tile.</p></div>
+          <div class="tb-body"><h3>1265 Esplanade</h3><p>A full-home renovation on Esplanade Avenue.</p></div>
           <div class="tb-meta"><span>Residential</span><span>New Orleans, LA</span></div>
         </div>
-        <div class="tb-card" data-sector="Residential" data-images="trout-01.jpg,trout-02.jpg,trout-03.jpg,trout-04.jpg,trout-05.jpg,trout-06.jpg,trout-07.jpg,trout-08.jpg,trout-09.jpg">
-          <div class="tb-photo">
-            <img src="images/trout-01.jpg" data-cover="trout" alt="8638 Trout Ave. &mdash; vaulted studio unit with sleeping loft, ladder, and knotty pine ceiling" style="width:100%; height:100%; object-fit:cover;">
+        <div class="tb-card" data-sector="Residential">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="70" height="50" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="120" y="30" width="70" height="90" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="210" y="60" width="60" height="60" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
           </div>
-          <div class="tb-body"><h3>8638 Trout Ave.</h3><p>A multi-unit renovation a block off Lake Tahoe &mdash; each studio built around a slatted pine volume that hides storage and the bed, paired with blackened-steel kitchenettes, grid tile, polished concrete, and sleeping lofts under vaulted ceilings.</p></div>
+          <div class="tb-body"><h3>8638 Trout Ave.</h3><p>A residential renovation in Kings Beach.</p></div>
           <div class="tb-meta"><span>Residential</span><span>Kings Beach, CA</span></div>
+        </div>
+        <div class="tb-card" data-sector="Residential">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="30" y="30" width="70" height="50" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="120" y="30" width="70" height="90" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="210" y="60" width="60" height="60" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Solomon St.</h3><p>A full-home renovation on Solomon Street.</p></div>
+          <div class="tb-meta"><span>Residential</span><span>Location TBD</span></div>
+        </div>
+        <div class="tb-card" data-sector="Retail">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="40" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="200" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Resistance Lagree &mdash; Milwaukee Ave</h3><p>A boutique fitness studio build-out on Milwaukee Avenue.</p></div>
+          <div class="tb-meta"><span>Retail</span><span>Chicago, IL</span></div>
+        </div>
+        <div class="tb-card" data-sector="Retail">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="40" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="200" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>Resistance Lagree &mdash; Addison Ave</h3><p>A second Resistance Lagree studio build-out on Addison Avenue.</p></div>
+          <div class="tb-meta"><span>Retail</span><span>Chicago, IL</span></div>
+        </div>
+        <div class="tb-card" data-sector="Retail">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="40" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="200" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>GGI Booth</h3><p>A trade show booth design for GGI.</p></div>
+          <div class="tb-meta"><span>Retail</span><span>Location TBD</span></div>
+        </div>
+        <div class="tb-card" data-sector="Retail">
+          <div class="tb-photo" style="background:var(--panel);">
+            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="280" height="130" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="40" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/><rect x="200" y="40" width="60" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1"/></svg>
+          </div>
+          <div class="tb-body"><h3>KI Showroom</h3><p>A furniture showroom build-out for KI.</p></div>
+          <div class="tb-meta"><span>Retail</span><span>Location TBD</span></div>
         </div>
       </div>
     </section>
@@ -976,7 +880,7 @@
     <section>
       <span class="eyebrow">News &amp; social</span>
       <h1 style="font-size:clamp(1.9rem,3.4vw,2.4rem); margin:14px 0 16px;">Press, insights, and studio updates.</h1>
-      <p style="color:var(--ink-soft); font-size:1rem; max-width:62ch; margin-bottom:30px; line-height:1.6;">Flex Design Studio is a New Orleans-based leader in workplace, hospitality, cannabis dispensary, and retail design. This is where we post practical insights for cannabis operators, commercial real estate developers, office and building managers, and bar, restaurant, and retail owners — plus press mentions and updates from LinkedIn and Instagram as they happen.</p>
+      <p style="color:var(--ink-soft); font-size:1rem; max-width:62ch; margin-bottom:30px; line-height:1.6;">Flex Design Studio is a New Orleans-based studio working in workplace, hospitality, cannabis dispensary, and retail design. This is where we post practical insights for cannabis operators, commercial real estate developers, office and building managers, and bar, restaurant, and retail owners — plus press mentions and updates from LinkedIn and Instagram as they happen.</p>
 
       <!--
         LIVE SOCIAL FEED SETUP (Juicer.io recommended, Elfsight also works):
@@ -993,7 +897,7 @@
         Elfsight works the same way: sign up, connect Instagram + LinkedIn,
         paste their <div class="elfsight-app-..."> + <script> in the same spots.
       -->
-      <ul class="juicer-feed" data-feed-id="flexdesignstudio_nola" data-per="10" data-pages="1" data-columns="4" style="margin-bottom:34px;"></ul>
+      <ul class="juicer-feed" data-feed-id="flexdesignstudio_nola" style="margin-bottom:34px;"></ul>
 
       <div class="filters" id="newsFilters">
         <button class="active" data-filter="all">All</button>
@@ -1009,141 +913,140 @@
       -->
       <div class="tb-grid" id="newsGrid">
 
-        <div class="tb-card" data-type="blog">
+        <a class="tb-card" data-type="blog" href="insights/shopping-center-store-placement.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
+          <div class="tb-body">
+            <h3>Shopping Center Store Placement: Location, Visibility &amp; Neighbors</h3>
+            <p>A tenant's guide to choosing and designing a space within an existing shopping center &mdash; where in the center to be, how to win visibility from the street and parking lot, and how adjacent businesses affect your traffic.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+          <div class="tb-meta"><span>Insight &middot; Shopping centers</span><span>Oct 2026</span></div>
+        </a>
+
+        <a class="tb-card" data-type="blog" href="insights/corporate-office-design-rfp.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
+          <div class="tb-body">
+            <h3>Corporate Office Design RFP: How to Write One Firms Can Answer</h3>
+            <p>A practical guide for corporate real estate and facilities teams on structuring a design RFP — scope, budget signals, and the questions that separate firms who can deliver from firms who can only present.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+          <div class="tb-meta"><span>Insight &middot; Corporate office design</span><span>Oct 2026</span></div>
+        </a>
+
+        <a class="tb-card" data-type="blog" href="insights/multi-location-corporate-office-design.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
+          <div class="tb-body">
+            <h3>Multi-Location Corporate Office Design: Keeping Brand Consistent</h3>
+            <p>For companies opening or refreshing offices in several cities, how a kit-of-parts approach keeps standards and brand consistent while letting each space respond to its building.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+          <div class="tb-meta"><span>Insight &middot; Multi-site rollouts</span><span>Oct 2026</span></div>
+        </a>
+
+        <a class="tb-card" data-type="blog" href="insights/workplace-strategy-corporate-headquarters.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
+          <div class="tb-body">
+            <h3>Workplace strategy before floor plan: how to program a corporate headquarters</h3>
+            <p>Why the best corporate office design starts with how space is actually used — and how to run programming before a single wall is drawn.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+          <div class="tb-meta"><span>Insight &middot; Workplace strategy</span><span>Oct 2026</span></div>
+        </a>
+
+        <a class="tb-card" data-type="blog" href="insights/boutique-vs-national-interior-design-firm.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
+          <div class="tb-body">
+            <h3>Boutique vs. National Interior Design Firm for Corporate Offices</h3>
+            <p>An honest look at the tradeoffs when selecting a design firm for a corporate office project, and where a principal-led studio is the stronger fit.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+          <div class="tb-meta"><span>Insight &middot; Choosing a firm</span><span>Oct 2026</span></div>
+        </a>
+
+        <a class="tb-card" data-type="blog" href="insights/tenant-improvement-vs-relocation.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
+          <div class="tb-body">
+            <h3>Tenant Improvement vs. Relocation: What to Model Before You Sign</h3>
+            <p>How to compare renewing and renovating against moving, and why a design partner belongs in the conversation before the lease is signed.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+          <div class="tb-meta"><span>Insight &middot; Corporate real estate</span><span>Oct 2026</span></div>
+        </a>
+
+        <a class="tb-card" data-type="blog" href="insights/corporate-office-design-schedule.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
+          <div class="tb-body">
+            <h3>Corporate Office Design Schedule: From Programming to Move-In</h3>
+            <p>A phase-by-phase look at how long corporate office projects typically take and where schedules most often slip.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+          <div class="tb-meta"><span>Insight &middot; Project schedule</span><span>Oct 2026</span></div>
+        </a>
+
+        <a class="tb-card" data-type="blog" href="insights/dispensary-design-checklist-permitting.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
           <div class="tb-body">
             <h3>Dispensary design checklist: what cannabis operators need before permitting</h3>
-            <p>A practical walkthrough for cannabis operators planning a new location — security lines, product flow, and the layout decisions that make or break a dispensary permit review, from a studio that specializes in cannabis dispensary design nationally.</p>
+            <p>A practical walkthrough for cannabis operators planning a new location — security lines, product flow, and the layout decisions that make or break a dispensary permit review.</p>
             <span class="read-more">Read more &rarr;</span>
           </div>
           <div class="tb-meta"><span>Insight &middot; Cannabis</span><span>Jul 2026</span></div>
-          <div class="insight-full" hidden>
-            <h4>Security is architecture, not an add-on</h4>
-            <p>Every state cannabis dispensary design program starts from the same regulatory baseline: controlled entry, limited-access product areas, and camera coverage with no blind spots. Where operators lose time in permitting is treating security as equipment dropped into a finished floor plan instead of a layout decision made on day one. A compliant dispensary design routes customers through a single controlled path from lobby to sales floor, keeps a secure vestibule between the public entrance and the retail area, and positions cash handling and storage away from exterior walls and windows. Get this sequencing wrong and a general contractor is reframing walls mid-build.</p>
-            <h4>Product flow and the sales counter</h4>
-            <p>Beyond security, the layout has to work as retail. Display cases, POS stations, and budtender counters need enough width for a browsing customer and a staff member to work side by side without a bottleneck at checkout. In cannabis dispensary design specifically, product categories (flower, edibles, concentrates, accessories) usually need distinct zones both for merchandising clarity and because some jurisdictions regulate how certain product types can be displayed or stored relative to entry points.</p>
-            <h4>What permitting reviewers actually check</h4>
-            <p>Plan reviewers are looking for three things: a clear security narrative matching the state's cannabis regulations, ADA-compliant circulation, and life-safety compliance (egress, occupancy load, fire separation) that hasn't been compromised by security partitions. Flex Design Studio builds every cannabis dispensary design project — from Terrabis's multiple Illinois and Missouri locations to concept work in New Jersey — around this sequence, so the drawings that go to permitting already answer the questions a reviewer is going to ask.</p>
-          </div>
-        </div>
+        </a>
 
-        <div class="tb-card" data-type="blog">
+        <a class="tb-card" data-type="blog" href="insights/commercial-real-estate-developers-hiring-a-design-firm.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
           <div class="tb-body">
             <h3>What commercial real estate developers should ask before hiring a design firm</h3>
             <p>For developers and property owners planning tenant improvements, a look at how the right interior design partner protects budget, timeline, and lease-up speed on workplace, retail, and hospitality build-outs.</p>
             <span class="read-more">Read more &rarr;</span>
           </div>
           <div class="tb-meta"><span>Insight &middot; Commercial real estate</span><span>Jul 2026</span></div>
-          <div class="insight-full" hidden>
-            <h4>Budget certainty starts at schematic, not construction documents</h4>
-            <p>The single biggest driver of tenant improvement cost overruns is a design that wasn't tested against real constraints before it got expensive to change. A design partner experienced in commercial real estate tenant improvement work will pressure-test a layout against the base building's mechanical, structural, and code constraints during schematic planning — before a contractor is pricing it. That's the phase where a $40,000 mistake is still a five-minute conversation.</p>
-            <h4>Timeline risk lives in permitting, not construction</h4>
-            <p>Developers chasing a lease-up date usually assume construction is the long pole. In practice, permitting delays caused by incomplete or non-coordinated drawings cost more time than the build itself. Ask any prospective firm how they coordinate with MEP, structural, and — for retail, hospitality, or cannabis dispensary design projects — security and life-safety consultants. A firm that runs those conversations in parallel with design development, not after, is the one that keeps your date.</p>
-            <h4>What "lease-up ready" actually means</h4>
-            <p>A workplace design, retail buildout, or hospitality space that photographs well but confuses tenants or customers in daily use isn't done — it's decorated. Ask to see how a firm designs for the operational reality of the space: staffing flow in a restaurant, sightlines in a retail store, way-finding in a multi-tenant office floor. Flex Design Studio works across all of these sectors nationally, which means the same studio coordinating your workplace fit-out can carry that same rigor into the retail or hospitality tenant next door.</p>
-          </div>
-        </div>
+        </a>
 
-        <div class="tb-card" data-type="blog">
+        <a class="tb-card" data-type="blog" href="insights/hybrid-office-retrofit-building-managers-guide.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
           <div class="tb-body">
             <h3>Retrofitting an office for hybrid work: a building manager's guide</h3>
             <p>Office and building managers are being asked to do more with existing floors. Flex Design Studio on how workplace design can raise occupancy and tenant satisfaction without a full gut renovation.</p>
             <span class="read-more">Read more &rarr;</span>
           </div>
           <div class="tb-meta"><span>Insight &middot; Workplace</span><span>Jul 2026</span></div>
-          <div class="insight-full" hidden>
-            <h4>Fewer assigned desks, more reasons to come in</h4>
-            <p>The office design brief has changed. Fixed desk ratios that made sense in 2019 now sit half-empty three days a week, while conference rooms and informal collaboration areas are overbooked. A hybrid-focused workplace design retrofit typically converts a portion of individual workstations into a mix of team huddle rooms, phone booths, and lounge-style collaboration zones — without touching the building's core mechanical or structural systems.</p>
-            <h4>What building managers underestimate</h4>
-            <p>Acoustic separation is the most commonly missed line item in an office design retrofit. Open, collaborative layouts sound great in a rendering and terrible in a building with thin partition walls. Budgeting for acoustic ceiling treatment and partial-height sound-dampening walls early avoids a change order once tenants start complaining. The second underestimated cost is power and data — flexible furniture layouts need flexible power distribution, which is a floor-box or power-pole conversation that has to happen in design development, not after the furniture is ordered.</p>
-            <h4>A retrofit, not a gut renovation</h4>
-            <p>The projects that raise occupancy fastest aren't full teardowns — they're targeted workplace design interventions: a refreshed lobby and elevator lobby, one or two signature amenity spaces, and updated finishes in the highest-traffic zones. Flex Design Studio's workplace design work, including the studio's own New Orleans headquarters, follows this same principle — spend where it changes how the space is actually used, not just how it photographs.</p>
-          </div>
-        </div>
+        </a>
 
-        <div class="tb-card" data-type="blog">
+        <a class="tb-card" data-type="blog" href="insights/bar-and-restaurant-design-first-year.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
           <div class="tb-body">
             <h3>Designing a bar or restaurant that survives its first year</h3>
             <p>For bar and restaurant owners, a breakdown of where hospitality design actually moves the needle on covers, labor flow, and repeat customers — not just what shows up in the photos.</p>
             <span class="read-more">Read more &rarr;</span>
           </div>
           <div class="tb-meta"><span>Insight &middot; Hospitality</span><span>Jul 2026</span></div>
-          <div class="insight-full" hidden>
-            <h4>The kitchen decides the dining room</h4>
-            <p>Most bar and restaurant design conversations start with the front of house — the bar, the booths, the lighting. But covers per night are capped by the kitchen and service line long before they're capped by seat count. Hospitality design that starts with a realistic ticket-time model for the actual menu, then builds the dining room and bar layout around a service path that can support it, is the difference between a restaurant that turns tables and one that bottlenecks at 7pm on a Friday.</p>
-            <h4>Labor flow is a design problem</h4>
-            <p>Servers and bartenders walking excess distance between the pass, the bar, and tables isn't a staffing problem — it's a layout problem. In hospitality design, a bar positioned to serve both the bar seating and a meaningful share of the dining room reduces the runner and server headcount needed to hit the same covers, which is a margin decision made at the design table, not after opening night.</p>
-            <h4>Design for the slow Tuesday, not just the packed Saturday</h4>
-            <p>A bar or restaurant design that only works at full capacity is a design that loses money most nights of the week. Flexible seating — banquettes that convert from two-tops to larger parties, a bar that reads as full at half capacity — keeps the room feeling right on a slow night, which is where most independent restaurants actually live. It's the same thinking behind projects like Flex Design Studio's Elevated Wine Bar and Apr&egrave;s nightclub in New Orleans: rooms designed to hold their character whether they're at 30% or 100% capacity.</p>
-          </div>
-        </div>
+        </a>
 
-        <div class="tb-card" data-type="blog">
+        <a class="tb-card" data-type="blog" href="insights/retail-storefront-design-conversion.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
           <div class="tb-body">
             <h3>Retail storefront design that converts foot traffic into sales</h3>
             <p>A guide for retail business owners on how storefront and floor-plan design shape conversion — from sightlines at the entrance to the layout decisions that keep shoppers moving toward checkout.</p>
             <span class="read-more">Read more &rarr;</span>
           </div>
           <div class="tb-meta"><span>Insight &middot; Retail</span><span>Jul 2026</span></div>
-          <div class="insight-full" hidden>
-            <h4>The first ten feet decide whether someone stays</h4>
-            <p>Retail design lives or dies in the decompression zone — the first few steps inside the door where a shopper is still deciding whether to browse or bounce. A cluttered entrance, unclear sightlines to the category they came in for, or a storefront window that doesn't signal what's actually sold inside all cost conversion before a customer reaches a single product.</p>
-            <h4>Sightlines that guide, not confuse</h4>
-            <p>Good retail design uses fixture height and placement to create a clear read of the store from the entrance — tall fixtures at the perimeter, lower ones toward the center, so a shopper can see across the floor and orient immediately. This matters as much for a flagship apparel store as it does for a dispensary retail floor, where product categorization also has to satisfy display regulations.</p>
-            <h4>Checkout is a design decision, not an afterthought</h4>
-            <p>Where the checkout counter sits changes both perceived wait time and impulse-purchase revenue. A counter visible from the entrance reduces the anxiety of an unclear checkout process; a counter positioned along a natural path past secondary product displays increases add-on sales. Flex Design Studio applies the same retail design principles across storefronts and cannabis dispensary retail floors alike — the regulatory details differ, the conversion logic doesn't.</p>
-          </div>
-        </div>
+        </a>
 
-        <div class="tb-card" data-type="blog">
+        <a class="tb-card" data-type="blog" href="insights/workplace-design-new-orleans.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
           <div class="tb-body">
             <h3>What makes workplace design actually work in New Orleans</h3>
-            <p>As a New Orleans workplace design leader, Flex breaks down how it balances brand identity with the practical realities of a hybrid-work office — from space planning to BIM-modeled build-outs.</p>
+            <p>Flex Design Studio breaks down how it balances brand identity with the practical realities of a hybrid-work office — from space planning to BIM-modeled build-outs.</p>
             <span class="read-more">Read more &rarr;</span>
           </div>
           <div class="tb-meta"><span>Insight &middot; Workplace</span><span>Jun 2026</span></div>
-          <div class="insight-full" hidden>
-            <h4>Brand identity versus practical reality</h4>
-            <p>New Orleans workplace design has a specific tension most national playbooks don't account for: clients want a space that reflects the city's character without leaning on tourist-facing cliches, inside buildings that are frequently older stock with real structural and mechanical constraints. Getting that balance right means starting from the building's actual bones, not a mood board, and letting brand identity show up in materials and color rather than forcing an open-plan layout into a floor plate that was never built for one.</p>
-            <h4>BIM-modeled build-outs reduce surprises</h4>
-            <p>Every Flex Design Studio workplace design project runs through Building Information Modeling from schematic planning forward, coordinating architecture, MEP, and finishes in a single model. For a New Orleans office build-out, where existing conditions are rarely as-drawn, that coordination catches conflicts — a duct run through a planned ceiling feature, a structural column inside a proposed conference room — before they become a change order mid-construction.</p>
-            <h4>What "hybrid-ready" means in practice</h4>
-            <p>A New Orleans workplace design that actually gets used treats the office as a destination, not a default. That means fewer, better collaboration spaces instead of rows of underused desks, acoustic separation that makes video calls usable from an open floor, and finishes durable enough to handle a coffee-shop level of daily traffic. Flex Design Studio has applied this approach to its own Bywater headquarters and to clients including Raven and Eurofins' New Orleans offices.</p>
-          </div>
-        </div>
+        </a>
 
-        <div class="tb-card" data-type="blog">
+        <a class="tb-card" data-type="blog" href="insights/cannabis-dispensary-design-compliance.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
           <div class="tb-body">
             <h3>Cannabis dispensary design: what compliance actually requires</h3>
-            <p>A look at the layout, security, and regulatory details that separate a compliant, sellable dispensary build-out from one that stalls in permitting — from a studio that specializes in cannabis dispensary design nationally.</p>
+            <p>A look at the layout, security, and regulatory details that separate a compliant, sellable dispensary build-out from one that stalls in permitting.</p>
             <span class="read-more">Read more &rarr;</span>
           </div>
           <div class="tb-meta"><span>Insight &middot; Cannabis</span><span>May 2026</span></div>
-          <div class="insight-full" hidden>
-            <h4>Compliance requirements vary by state, the logic doesn't</h4>
-            <p>Every state regulates cannabis dispensary design differently — some require a limited-access vestibule, others mandate specific product storage and vault specifications, and camera coverage requirements vary widely. What stays constant across every jurisdiction Flex Design Studio has worked in, from Illinois to Missouri to New Jersey, is that compliant dispensary design has to be built into the schematic layout, not layered onto a finished floor plan after the fact.</p>
-            <h4>The regulatory checklist that shapes layout</h4>
-            <p>A dispensary design review typically checks four things: controlled entry sequencing, product security (display case construction, vault location, storage separation from public areas), ADA-compliant circulation, and standard life-safety code — egress width, occupancy load, fire separation between the retail floor and any back-of-house storage. Missing any one of these in the construction documents is what sends a project back for revisions instead of through to a permit.</p>
-            <h4>Designing for the inspector and the customer at the same time</h4>
-            <p>The best cannabis dispensary design work doesn't read as a security checkpoint to the customer walking in. Flex Design Studio's work with Terrabis across Illinois and Missouri, and concept work for AGS and Cloudhaven, treats security infrastructure as part of the material palette — branded vestibules, finished display walls, considered lighting — rather than an obvious add-on, so the space satisfies the regulator and still feels like a retail environment worth walking into.</p>
-          </div>
-        </div>
+        </a>
 
-        <div class="tb-card" data-type="blog">
+        <a class="tb-card" data-type="blog" href="insights/hospitality-design-trends-new-orleans.html" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
           <div class="tb-body">
             <h3>Hospitality design trends shaping New Orleans bars and restaurants</h3>
             <p>Flex Design Studio on how hospitality design in New Orleans is evolving — and what it takes to design a bar or restaurant that reads as intentional as the menu.</p>
             <span class="read-more">Read more &rarr;</span>
           </div>
           <div class="tb-meta"><span>Insight &middot; Hospitality</span><span>Apr 2026</span></div>
-          <div class="insight-full" hidden>
-            <h4>Materials that hold up to a New Orleans summer</h4>
-            <p>Humidity and heat shape hospitality design decisions in New Orleans in ways a more temperate market never has to consider. Material choices that look identical on a spec sheet perform very differently after a year of high humidity and heavy foot traffic — sealed concrete and porcelain tile over untreated wood on high-traffic floors, moisture-resistant substrates behind bars and in kitchen-adjacent walls. It's a durability conversation as much as an aesthetic one.</p>
-            <h4>Designing for photographs and for service, at the same time</h4>
-            <p>A striking ceiling detail or a mirrored wine wall photographs well, but hospitality design that only works for the camera fails the staff running food and drinks through it every night. The best New Orleans bar and restaurant projects — Flex Design Studio's Elevated Wine Bar and Apr&egrave;s nightclub among them — build the signature visual moment around, not in spite of, the service path.</p>
-            <h4>What's changing heading into 2026</h4>
-            <p>Rooftop and outdoor expansion projects, like Flex Design Studio's Chicory rooftop lounge addition, are picking up as venues look to add capacity without a full renovation of the existing footprint. Hospitality design is also leaning further into industrial and futuristic material palettes — perforated metal, glass block, exposed structure — as an alternative to the reclaimed-wood look that has defined New Orleans hospitality design for the last decade.</p>
-          </div>
-        </div>
+        </a>
 
         <a class="tb-card" data-type="press" href="https://www.nola.com/news/business/bymbo-bywater-marigny-business-organization-saint-claude/article_f141a5ad-9e55-4542-9fdf-68d28eb3c6f3.html" target="_blank" rel="noopener" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
           <div class="tb-body">
@@ -1155,7 +1058,7 @@
 
         <a class="tb-card" data-type="press" href="https://www.cannabisbusinesstimes.com/dispensary/news/15748673/terrabis-opening-5th-illinois-dispensary-in-mundelein" target="_blank" rel="noopener" style="display:flex; flex-direction:column; text-decoration:none; color:inherit;">
           <div class="tb-photo">
-            <img src="images/terrabis-01.jpg" alt="Terrabis dispensary storefront in Mundelein, IL" style="width:100%; height:100%; object-fit:cover;">
+            <img src="images/terrabis-16.jpg" alt="Terrabis dispensary storefront in Mundelein, IL" style="width:100%; height:100%; object-fit:cover;">
           </div>
           <p class="photo-credit">Photo provided by Flex Design Studio</p>
           <div class="tb-body">
@@ -1221,7 +1124,7 @@
           <div class="tb-body">
             <svg width="26" height="26" viewBox="0 0 30 30" style="margin-bottom:12px;" aria-hidden="true"><rect x="0.75" y="0.75" width="28.5" height="28.5" rx="4" fill="none" stroke="var(--ink)" stroke-width="1.5"/><rect x="8" y="12" width="3.2" height="11" fill="var(--ink)"/><circle cx="9.6" cy="7.8" r="1.9" fill="var(--ink)"/><path d="M15 12h3.1v1.7c.9-1.4 2.4-2.1 4-2.1 3 0 4.9 1.9 4.9 5.6V23h-3.2v-5.2c0-1.9-.8-3-2.4-3-1.5 0-2.4 1-2.7 2v6.2H15z" fill="var(--ink)"/></svg>
             <h3>Follow Flex on LinkedIn</h3>
-            <p>Company updates, project features, and studio news from a workplace and hospitality design leader.</p>
+            <p>Company updates, project features, and studio news from Flex Design Studio.</p>
           </div>
           <div class="tb-meta"><span>Social</span><span>linkedin.com/company/flex-design-studio</span></div>
         </a>
@@ -1244,61 +1147,9 @@
     <section>
       <span class="eyebrow">Contact</span>
       <h1 style="font-size:clamp(1.9rem,3.4vw,2.4rem); margin:14px 0 16px;">Say hello.</h1>
-      <p style="color:var(--ink-soft); font-size:1rem; max-width:60ch; margin-bottom:36px; line-height:1.6;">Tell us the sector, the timeline, and where the project currently stands — or reach out to someone on the team directly below. We reply within two business days.</p>
+      <p style="color:var(--ink-soft); font-size:1rem; max-width:60ch; margin-bottom:36px; line-height:1.6;">Share the sector, the timeline, and where the project currently stands — or reach out to someone on the team directly below. We reply within two business days.</p>
 
-      <div class="contact-grid" style="margin-bottom:48px;">
-        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="9227f371-7e8b-4e3b-be93-7fe289012020">
-          <input type="hidden" name="subject" value="New project inquiry — flexdesignstudio.com">
-          <input type="hidden" name="from_name" value="Flex Design Studio website">
-          <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Jordan Ellis" required>
-          </div>
-          <div class="field">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" placeholder="Company or brand name">
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="jordan@company.com" required>
-          </div>
-          <div class="field">
-            <label for="sector">Sector</label>
-            <select id="sector" name="sector">
-              <option>Workplace</option>
-              <option>Hospitality</option>
-              <option>Retail</option>
-              <option>Cannabis dispensary</option>
-              <option>Cannabis grow / manufacturing</option>
-              <option>Residential</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Project details</label>
-            <textarea id="message" name="message" placeholder="Project phase, rough square footage, location, timeline..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-solid">Send message</button>
-          <div class="confirm-msg" id="confirmMsg">Message received. We'll follow up within two business days.</div>
-          <div class="confirm-msg" id="errorMsg" style="border-color:var(--ink-soft); color:var(--ink);">Something went wrong. Please email us directly at aleks@flexdesignstudio.com.</div>
-        </form>
-
-        <div class="contact-info-card">
-          <div class="row"><span class="k">Studio</span><span class="v">1242 Montegut St<br>New Orleans, LA 70117</span></div>
-          <div class="row"><span class="k">Phone</span><span class="v">(504) 233-4338</span></div>
-          <div class="row"><span class="k">Email</span><span class="v"><a href="mailto:aleks@flexdesignstudio.com">aleks@flexdesignstudio.com</a></span></div>
-          <div class="row"><span class="k">Instagram</span><span class="v">@flexdesignstudio_nola</span></div>
-          <div class="row"><span class="k">LinkedIn</span><span class="v">flex-design-studio</span></div>
-          <div class="row"><span class="k">Facebook</span><span class="v">FLEX Design Studio</span></div>
-          <div class="row"><span class="k">Reply time</span><span class="v">Within 2 business days</span></div>
-        </div>
-      </div>
-
-      <hr class="divider" style="margin-bottom:48px;">
-
-      <div class="team">
+      <div class="team" style="margin-bottom:48px;">
         <div class="person">
           <div class="avatar-wrap" style="--duo: #E2591F;"><img src="https://static.wixstatic.com/media/cfa116_ad919b6f5ed04eebb57846825a88f8c7~mv2.jpg/v1/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/AF%20HEADSHOT%202_edited.jpg" alt="Aleks Furman"></div>
           <h3>Aleks Furman</h3>
@@ -1339,13 +1190,60 @@
           <div class="avatar-wrap" style="--duo: #2FA187;"><img src="https://static.wixstatic.com/media/cfa116_e7a3d5fd1e784d1c83b48f4210206c8f~mv2.jpg/v1/crop/x_31,y_0,w_173,h_199/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/download%20(3)_edited.jpg" alt="Sundae Colletti"></div>
           <h3>Sundae Colletti</h3>
           <div class="role">Accounting / HR</div>
-          <p><a href="tel:+19852913181">985.291.3181</a><br><a href="mailto:sundae@flexdesignstudio.com">sundae@flexdesignstudio.com</a></p>
+          <p><a href="tel:+16097518959">609.751.8959</a><br><a href="mailto:info@flexdesignstudio.com">info@flexdesignstudio.com</a></p>
         </div>
         <div class="person">
           <div class="avatar-wrap" style="--duo: linear-gradient(135deg, #3E7BFF, #9B3EFF);"><img src="https://static.wixstatic.com/media/11062b_a899d943c4e74e8bac3fce7456709abc~mv2.jpg/v1/crop/x_596,y_0,w_1828,h_1824/fill/w_320,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Blue%20Gradient%20Abstract%20Art.jpg" alt="Bronwen Wyatt"></div>
           <h3>Bronwen Wyatt</h3>
           <div class="role">PR &amp; media partner</div>
-          <p><a href="mailto:bayoustaintcake@gmail.com">bayoustaintcake@gmail.com</a><br><a href="https://www.bayousaintcake.com/" target="_blank" rel="noopener">bayousaintcake.com</a></p>
+          <p><a href="tel:+13128234356">312.823.4356</a><br><a href="mailto:info@flexdesignstudio.com">info@flexdesignstudio.com</a></p>
+        </div>
+      </div>
+
+      <hr class="divider" style="margin-bottom:48px;">
+
+      <div class="contact-grid">
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Jordan Ellis" required>
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input type="text" id="company" placeholder="Company or brand name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="jordan@company.com" required>
+          </div>
+          <div class="field">
+            <label for="sector">Sector</label>
+            <select id="sector">
+              <option>Workplace</option>
+              <option>Hospitality</option>
+              <option>Retail</option>
+              <option>Cannabis dispensary</option>
+              <option>Cannabis grow / manufacturing</option>
+              <option>Residential</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Project details</label>
+            <textarea id="message" placeholder="Project phase, rough square footage, location, timeline..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid">Send message</button>
+          <div class="confirm-msg" id="confirmMsg">Message received. We'll follow up within two business days.</div>
+        </form>
+
+        <div class="contact-info-card">
+          <div class="row"><span class="k">Studio</span><span class="v">1242 Montegut St<br>New Orleans, LA 70117</span></div>
+          <div class="row"><span class="k">Phone</span><span class="v">(504) 233-4338</span></div>
+          <div class="row"><span class="k">Email</span><span class="v">aleks@flexdesignstudio.com</span></div>
+          <div class="row"><span class="k">Instagram</span><span class="v">@flexdesignstudio_nola</span></div>
+          <div class="row"><span class="k">LinkedIn</span><span class="v">flex-design-studio</span></div>
+          <div class="row"><span class="k">Facebook</span><span class="v">FLEX Design Studio</span></div>
+          <div class="row"><span class="k">Reply time</span><span class="v">Within 2 business days</span></div>
         </div>
       </div>
     </section>
@@ -1369,16 +1267,6 @@
       <h2 id="modalTitle"></h2>
       <p id="modalDesc"></p>
     </div>
-  </div>
-</div>
-
-<div class="insight-modal" id="insightModal">
-  <div class="insight-modal-backdrop" onclick="closeInsightModal()"></div>
-  <div class="insight-modal-box">
-    <button class="insight-modal-close" onclick="closeInsightModal()" aria-label="Close">&times;</button>
-    <div class="eyebrow" id="insightModalMeta"></div>
-    <h2 id="insightModalTitle"></h2>
-    <div id="insightModalContent"></div>
   </div>
 </div>
 
@@ -1406,6 +1294,7 @@
     });
     document.getElementById('navLinks').classList.remove('open');
     window.scrollTo({top:0, behavior:'smooth'});
+    try { history.replaceState(null, '', page === 'home' ? location.pathname + location.search : '#' + page); } catch (e) {}
   }
   document.querySelectorAll('.navlink').forEach(function(btn){
     btn.addEventListener('click', function(){ goTo(btn.dataset.page); });
@@ -1413,60 +1302,11 @@
   document.getElementById('burgerBtn').addEventListener('click', function(){
     document.getElementById('navLinks').classList.toggle('open');
   });
-  (function(){
-    var form = document.getElementById('contactForm');
-    if (!form) return;
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var ok = document.getElementById('confirmMsg');
-      var err = document.getElementById('errorMsg');
-      ok.classList.remove('show'); err.classList.remove('show');
-      var btn = form.querySelector('button[type="submit"]');
-      var label = btn.textContent;
-      btn.textContent = 'Sending…'; btn.disabled = true;
-
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
-      })
-      .then(function(r){ return r.json(); })
-      .then(function(data){
-        if (data.success){ ok.classList.add('show'); form.reset(); }
-        else { err.classList.add('show'); }
-      })
-      .catch(function(){ err.classList.add('show'); })
-      .finally(function(){ btn.textContent = label; btn.disabled = false; });
-    });
-  })();
-
-  (function(){
-    // Email links: copy address to clipboard on click, show quick "Copied!" feedback.
-    // The mailto: still fires for anyone who has a default mail app, so both paths work.
-    function flash(el){
-      var note = document.createElement('span');
-      note.textContent = 'Copied!';
-      note.style.cssText = 'margin-left:8px; font-family:\'IBM Plex Mono\',monospace; font-size:0.7rem; color:var(--blue-deep); letter-spacing:0.04em; vertical-align:middle;';
-      el.insertAdjacentElement('afterend', note);
-      setTimeout(function(){ note.remove(); }, 1600);
-    }
-    document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
-      a.addEventListener('click', function(){
-        var addr = a.getAttribute('href').replace(/^mailto:/,'').split('?')[0];
-        if (navigator.clipboard && navigator.clipboard.writeText){
-          navigator.clipboard.writeText(addr).then(function(){ flash(a); }).catch(function(){});
-        } else {
-          // older-browser fallback
-          var t = document.createElement('textarea');
-          t.value = addr; t.style.position='fixed'; t.style.opacity='0';
-          document.body.appendChild(t); t.select();
-          try { document.execCommand('copy'); flash(a); } catch(e){}
-          document.body.removeChild(t);
-        }
-      });
-    });
-  })();
-
+  function handleSubmit(e){
+    e.preventDefault();
+    document.getElementById('confirmMsg').classList.add('show');
+    document.getElementById('contactForm').reset();
+  }
   function wireFilter(filterId, gridId, dataAttr){
     document.querySelectorAll('#' + filterId + ' button').forEach(function(btn){
       btn.addEventListener('click', function(){
@@ -1560,43 +1400,12 @@
     card.addEventListener('click', function(){ openProjectModal(card); });
   });
 
-  // ---------- INSIGHT MODAL ----------
-  function openInsightModal(card){
-    var title = card.querySelector('h3').innerHTML;
-    var metaSpans = card.querySelectorAll('.tb-meta span');
-    var category = metaSpans[0] ? metaSpans[0].textContent : '';
-    var date = metaSpans[1] ? metaSpans[1].textContent : '';
-    var fullContent = card.querySelector('.insight-full');
 
-    document.getElementById('insightModalTitle').innerHTML = title;
-    document.getElementById('insightModalMeta').textContent = category + (date ? ' \u00b7 ' + date : '');
-    document.getElementById('insightModalContent').innerHTML = fullContent ? fullContent.innerHTML : '';
-
-    document.getElementById('insightModal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-    document.getElementById('insightModal').querySelector('.insight-modal-box').scrollTop = 0;
-  }
-  function closeInsightModal(){
-    document.getElementById('insightModal').classList.remove('active');
-    document.body.style.overflow = '';
-  }
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape' && document.getElementById('insightModal').classList.contains('active')) closeInsightModal();
-  });
-  document.querySelectorAll('#newsGrid .tb-card[data-type="blog"]').forEach(function(card){
-    card.addEventListener('click', function(){ openInsightModal(card); });
-  });
-
-  goTo('home');
+  var startPage = (location.hash || '').replace('#', '');
+  goTo(document.getElementById('page-' + startPage) ? startPage : 'home');
 </script>
 
 <script type="text/javascript" src="https://www.juicer.io/embed/flexdesignstudio_nola/embed-code.js" async defer></script>
-
-<!-- Vercel Web Analytics (static-site script method; no npm package needed) -->
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
 
 </body>
 </html>
