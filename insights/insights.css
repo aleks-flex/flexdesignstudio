@@ -65,6 +65,10 @@ a{color:inherit;}
 .article-body a{color:var(--blue); text-underline-offset:3px;}
 .article-body a:hover{color:var(--ink);}
 
+.article-body h3{font-family:'Archivo', sans-serif; font-weight:700; font-size:1.02rem; margin:22px 0 6px;}
+.article-body strong{color:var(--ink); font-weight:600;}
+.cta p a{color:var(--blue); text-underline-offset:3px;}
+
 .cta{margin:40px 0 0; padding:28px 32px; background:rgba(255,255,255,0.75); border:1px solid var(--line);}
 .cta h2{font-size:1.2rem; margin-bottom:10px;}
 .cta p{color:var(--ink-soft); font-size:0.96rem; line-height:1.6; margin-bottom:18px;}
